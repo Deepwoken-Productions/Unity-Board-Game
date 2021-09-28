@@ -1,0 +1,88 @@
+{
+    "name": "InputMaps",
+    "maps": [
+        {
+            "name": "KeyboardAndMouse",
+            "id": "2a5ccc3f-a4a0-40e0-85a1-812d636680b7",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "c32823ab-d25f-4c8f-b958-26ff61b4eaaa",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MousePosition",
+                    "type": "PassThrough",
+                    "id": "9391c588-03f3-4319-8a71-47216c3e156b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "RightClick",
+                    "type": "Button",
+                    "id": "9000ebdf-9ae6-4343-9ad3-48d617116054",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "21be2607-a076-44b2-8b89-b49f4f04c134",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC master race",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c023133c-13de-4014-a072-3328e89d7804",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC master race",
+                    "action": "MousePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0b0878ac-2d87-4aea-89ed-5c791dcef3d1",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC master race",
+                    "action": "RightClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "PC master race",
+            "bindingGroup": "PC master race",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
