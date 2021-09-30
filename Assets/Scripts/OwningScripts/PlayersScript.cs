@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 //The script that allows the player to do stuff
@@ -53,7 +52,13 @@ public class PlayersScript : MonoBehaviour
     void Start()
     {
         //Initializing variables
+        
+
         tileOrder = TileOrderScript.instance.tileOrder;
+        for (int i = 0; i < tileOrder.Length; i++) 
+        {
+            Debug.Log("Loc: " + tileOrder[i].name);
+        }
         mainCamera = TileOrderScript.instance.mainCamera;
 
         //Moving the player into the "root" tile
@@ -66,6 +71,7 @@ public class PlayersScript : MonoBehaviour
 
             //Raycasting from the player's current mouse position downwards
             RaycastHit2D raycastResults = Physics2D.Raycast(currentMousePosition, -mainCamera.transform.forward, 1000f);
+            Debug.Log("Pos: " + currentMousePosition);
             
             if (raycastResults)
             {
@@ -91,8 +97,9 @@ public class PlayersScript : MonoBehaviour
                     }
 
                     //If player clicked tile is greater than -1 then calculate a moveDiceRoll value
-                    if(playerClickedTile >= 0)
+                    if (playerClickedTile >= 0)
                     {
+                        Debug.Log("True");
                         //The tile script of playerClickedTile
                         TileScript playerClickedTileScript = tileOrder[playerClickedTile].GetComponent<TileScript>();
 
@@ -108,7 +115,7 @@ public class PlayersScript : MonoBehaviour
                         }
 
                         //If distance is equal to the number of tiles in the map, then don't move the player at all
-                        if(moveDiceRoll == tileOrder.Length + 1)
+                        if (moveDiceRoll == tileOrder.Length + 1)
                         {
                             moveDiceRoll = 0;
                         }
@@ -118,6 +125,10 @@ public class PlayersScript : MonoBehaviour
                         {
                             StartCoroutine(IterateOverTiles(false, moveDiceRoll));
                         }
+                    }
+                    else 
+                    {
+                        Debug.Log("Sadness");
                     }
                 }
             }

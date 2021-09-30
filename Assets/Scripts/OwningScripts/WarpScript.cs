@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class WarpScript : TileScript
 {
-    public WarpObject tile;
-    // Start is called before the first frame update
-    void Start()
-    {
-        tileName = tile.tileName;
-        tileOrder = tile.tileOrder;
-    }
+    public byte sendToTileNum = 0;
 
     public override void ActivateTile(PlayersScript player)
     {
-        player.playerCurrentTile = tile.sendToTileNum;
+        player.playerCurrentTile = sendToTileNum;
         player.TeleportToPos();
         Debug.Log("Trying To warp");
     }
