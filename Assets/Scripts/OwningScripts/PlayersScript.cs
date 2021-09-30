@@ -52,13 +52,7 @@ public class PlayersScript : MonoBehaviour
     void Start()
     {
         //Initializing variables
-        
-
         tileOrder = TileOrderScript.instance.tileOrder;
-        for (int i = 0; i < tileOrder.Length; i++) 
-        {
-            Debug.Log("Loc: " + tileOrder[i].name);
-        }
         mainCamera = TileOrderScript.instance.mainCamera;
 
         //Moving the player into the "root" tile
@@ -70,11 +64,12 @@ public class PlayersScript : MonoBehaviour
         userInputMap.KeyboardAndMouse.Click.performed += ctx => {
 
             //Raycasting from the player's current mouse position downwards
-            RaycastHit2D raycastResults = Physics2D.Raycast(currentMousePosition, -mainCamera.transform.forward, 1000f);
-            Debug.Log("Pos: " + currentMousePosition);
+            RaycastHit2D raycastResults = Physics2D.Raycast(currentMousePosition, -mainCamera.transform.forward, Mathf.Infinity);
             
             if (raycastResults)
             {
+                Debug.Log(raycastResults.transform.name);
+
                 //If the player or the iterator is not currently moving
                 if (!isMoving)
                 {
@@ -99,7 +94,6 @@ public class PlayersScript : MonoBehaviour
                     //If player clicked tile is greater than -1 then calculate a moveDiceRoll value
                     if (playerClickedTile >= 0)
                     {
-                        Debug.Log("True");
                         //The tile script of playerClickedTile
                         TileScript playerClickedTileScript = tileOrder[playerClickedTile].GetComponent<TileScript>();
 
@@ -125,10 +119,6 @@ public class PlayersScript : MonoBehaviour
                         {
                             StartCoroutine(IterateOverTiles(false, moveDiceRoll));
                         }
-                    }
-                    else 
-                    {
-                        Debug.Log("Sadness");
                     }
                 }
             }
