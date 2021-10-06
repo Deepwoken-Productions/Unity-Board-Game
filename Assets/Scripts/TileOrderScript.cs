@@ -11,13 +11,15 @@ public class TileOrderScript : MonoBehaviour
     public static TileOrderScript instance { get; private set; }
 
     //Setting where the tiles are located and declaring a transform array named tileOrder
-    public Transform mapTiles;
     public Camera mainCamera;
-    [HideInInspector]
-    public Transform[] tileOrder;
+
+    public List<Transform[]> tileOrders;
+    public Transform[] maps;
 
     void Awake()
     {
+        tileOrders = new List<Transform[]>();
+
         //Initializes and populates the tile order array
         InitializePopulateArray();
 
@@ -35,16 +37,18 @@ public class TileOrderScript : MonoBehaviour
 
     void InitializePopulateArray()
     {
-        //Caching the number of tiles in the map as a variable
-        int tileNumber = mapTiles.childCount;
-
-        //Initializing the array tileOrder
-        tileOrder = new Transform[tileNumber];
-
-        //Populating the array tileOrder, might add a sorthing algorithm here later
-        for (int i = 0; i < tileNumber; i++)
+        for(int i = 0; i < maps.Length; i++)
         {
-            tileOrder[i] = mapTiles.GetChild(i);
+            Transform mapTiles = maps[i];
+            int mapTileNumber = mapTiles.childCount;
+
+            Transform[] tileOrder = new Transform[mapTileNumber];
+            tileOrders.Add(tileOrder);
+
+            for (int z = 0; z < mapTileNumber; z++)
+            {
+                tileOrder[z] = mapTiles.GetChild(z);
+            }
         }
     }
 }

@@ -11,6 +11,7 @@ public class PlayersScript : MonoBehaviour
 
     public byte playerCurrentTile = 0;
     private byte iteratorCurrentTile = 0;
+    public byte defaultMapLayer;
 
     private int currentDiceRoll;
     public int zOffset;
@@ -45,19 +46,20 @@ public class PlayersScript : MonoBehaviour
         userInputMap = new InputMaps();
     }
 
-    public void TeleportToPos() 
+    public void TeleportToPos(byte mapLayer) 
     {
+        tileOrder = TileOrderScript.instance.tileOrders[mapLayer];
         playerMoveToPosition = tileOrder[playerCurrentTile].position;
     }
 
     void Start()
     {
         //Initializing variables
-        tileOrder = TileOrderScript.instance.tileOrder;
+        tileOrder = TileOrderScript.instance.tileOrders[defaultMapLayer];
         mainCamera = TileOrderScript.instance.mainCamera;
 
         //Moving the player into the "root" tile
-        TeleportToPos();
+        TeleportToPos(defaultMapLayer);
 
         //--Start of player input system code--//
 
