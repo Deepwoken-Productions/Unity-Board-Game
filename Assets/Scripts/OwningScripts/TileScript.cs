@@ -12,8 +12,8 @@ public class TileScript : MonoBehaviour
     //Cached variables
 
     public string tileName;
-    public byte tileOrder;
 
+    //What are these for?
     public bool selected;
     public string selectedPlayerName;
 
