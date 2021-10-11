@@ -41,6 +41,14 @@ public class @InputMaps : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""FlipCard"",
+                    ""type"": ""Button"",
+                    ""id"": ""97182d80-79ed-426e-b41f-4c1815a4d27e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -76,6 +84,17 @@ public class @InputMaps : IInputActionCollection, IDisposable
                     ""action"": ""RightClick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f56d5ff8-dd80-4e53-8fc2-b2e04c005816"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""PC master race"",
+                    ""action"": ""FlipCard"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -104,6 +123,7 @@ public class @InputMaps : IInputActionCollection, IDisposable
         m_KeyboardAndMouse_Click = m_KeyboardAndMouse.FindAction("Click", throwIfNotFound: true);
         m_KeyboardAndMouse_MousePosition = m_KeyboardAndMouse.FindAction("MousePosition", throwIfNotFound: true);
         m_KeyboardAndMouse_RightClick = m_KeyboardAndMouse.FindAction("RightClick", throwIfNotFound: true);
+        m_KeyboardAndMouse_FlipCard = m_KeyboardAndMouse.FindAction("FlipCard", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -156,6 +176,7 @@ public class @InputMaps : IInputActionCollection, IDisposable
     private readonly InputAction m_KeyboardAndMouse_Click;
     private readonly InputAction m_KeyboardAndMouse_MousePosition;
     private readonly InputAction m_KeyboardAndMouse_RightClick;
+    private readonly InputAction m_KeyboardAndMouse_FlipCard;
     public struct KeyboardAndMouseActions
     {
         private @InputMaps m_Wrapper;
@@ -163,6 +184,7 @@ public class @InputMaps : IInputActionCollection, IDisposable
         public InputAction @Click => m_Wrapper.m_KeyboardAndMouse_Click;
         public InputAction @MousePosition => m_Wrapper.m_KeyboardAndMouse_MousePosition;
         public InputAction @RightClick => m_Wrapper.m_KeyboardAndMouse_RightClick;
+        public InputAction @FlipCard => m_Wrapper.m_KeyboardAndMouse_FlipCard;
         public InputActionMap Get() { return m_Wrapper.m_KeyboardAndMouse; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -181,6 +203,9 @@ public class @InputMaps : IInputActionCollection, IDisposable
                 @RightClick.started -= m_Wrapper.m_KeyboardAndMouseActionsCallbackInterface.OnRightClick;
                 @RightClick.performed -= m_Wrapper.m_KeyboardAndMouseActionsCallbackInterface.OnRightClick;
                 @RightClick.canceled -= m_Wrapper.m_KeyboardAndMouseActionsCallbackInterface.OnRightClick;
+                @FlipCard.started -= m_Wrapper.m_KeyboardAndMouseActionsCallbackInterface.OnFlipCard;
+                @FlipCard.performed -= m_Wrapper.m_KeyboardAndMouseActionsCallbackInterface.OnFlipCard;
+                @FlipCard.canceled -= m_Wrapper.m_KeyboardAndMouseActionsCallbackInterface.OnFlipCard;
             }
             m_Wrapper.m_KeyboardAndMouseActionsCallbackInterface = instance;
             if (instance != null)
@@ -194,6 +219,9 @@ public class @InputMaps : IInputActionCollection, IDisposable
                 @RightClick.started += instance.OnRightClick;
                 @RightClick.performed += instance.OnRightClick;
                 @RightClick.canceled += instance.OnRightClick;
+                @FlipCard.started += instance.OnFlipCard;
+                @FlipCard.performed += instance.OnFlipCard;
+                @FlipCard.canceled += instance.OnFlipCard;
             }
         }
     }
@@ -212,5 +240,6 @@ public class @InputMaps : IInputActionCollection, IDisposable
         void OnClick(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
         void OnRightClick(InputAction.CallbackContext context);
+        void OnFlipCard(InputAction.CallbackContext context);
     }
 }

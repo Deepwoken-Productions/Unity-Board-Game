@@ -28,6 +28,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "FlipCard",
+                    "type": "Button",
+                    "id": "97182d80-79ed-426e-b41f-4c1815a4d27e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -61,6 +69,17 @@
                     "processors": "",
                     "groups": "PC master race",
                     "action": "RightClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f56d5ff8-dd80-4e53-8fc2-b2e04c005816",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC master race",
+                    "action": "FlipCard",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
