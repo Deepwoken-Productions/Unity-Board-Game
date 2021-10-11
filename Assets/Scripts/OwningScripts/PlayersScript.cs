@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 //The script that allows the player to do stuff
@@ -11,7 +10,6 @@ public class PlayersScript : MonoBehaviour
 
     public byte playerCurrentTile = 0;
     private byte iteratorCurrentTile = 0;
-    public byte defaultMapLayer;
 
     private int currentDiceRoll;
     public int zOffset;
@@ -46,20 +44,19 @@ public class PlayersScript : MonoBehaviour
         userInputMap = new InputMaps();
     }
 
-    public void TeleportToPos(byte mapLayer) 
+    public void TeleportToPos() 
     {
-        tileOrder = TileOrderScript.instance.tileOrders[mapLayer];
         playerMoveToPosition = tileOrder[playerCurrentTile].position;
     }
 
     void Start()
     {
         //Initializing variables
-        tileOrder = TileOrderScript.instance.tileOrders[defaultMapLayer];
+        tileOrder = TileOrderScript.instance.tileOrder;
         mainCamera = TileOrderScript.instance.mainCamera;
 
         //Moving the player into the "root" tile
-        TeleportToPos(defaultMapLayer);
+        TeleportToPos();
 
         //--Start of player input system code--//
 
@@ -67,10 +64,12 @@ public class PlayersScript : MonoBehaviour
         userInputMap.KeyboardAndMouse.Click.performed += ctx => {
 
             //Raycasting from the player's current mouse position downwards
-            RaycastHit2D raycastResults = Physics2D.Raycast(currentMousePosition, -mainCamera.transform.forward, 1000f);
+            RaycastHit2D raycastResults = Physics2D.Raycast(currentMousePosition, -mainCamera.transform.forward, Mathf.Infinity);
             
             if (raycastResults)
             {
+                Debug.Log(raycastResults.transform.name);
+
                 //If the player or the iterator is not currently moving
                 if (!isMoving)
                 {
@@ -93,7 +92,7 @@ public class PlayersScript : MonoBehaviour
                     }
 
                     //If player clicked tile is greater than -1 then calculate a moveDiceRoll value
-                    if(playerClickedTile >= 0)
+                    if (playerClickedTile >= 0)
                     {
                         //The tile script of playerClickedTile
                         TileScript playerClickedTileScript = tileOrder[playerClickedTile].GetComponent<TileScript>();
@@ -110,7 +109,7 @@ public class PlayersScript : MonoBehaviour
                         }
 
                         //If distance is equal to the number of tiles in the map, then don't move the player at all
-                        if(moveDiceRoll == tileOrder.Length + 1)
+                        if (moveDiceRoll == tileOrder.Length + 1)
                         {
                             moveDiceRoll = 0;
                         }
