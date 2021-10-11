@@ -31,7 +31,7 @@ public class TileOrderScript : MonoBehaviour
        //If there're pre existing instances of this class then destroy them
         else
         {
-            Destroy(gameObject);
+            GameObject.Destroy(gameObject);
         }
     }
 
