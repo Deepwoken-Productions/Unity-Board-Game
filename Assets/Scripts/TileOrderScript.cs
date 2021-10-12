@@ -4,7 +4,7 @@ using UnityEngine;
 
 //This is a singleton script, that means there is
 //only meant to be one instance of these in the entire game OwO
-//This script in particular handles the ordering of tiles in game into an array
+//This script in particular handles the ordering of tiles in game into an array ~O_O~
 
 public class TileOrderScript : MonoBehaviour
 {
