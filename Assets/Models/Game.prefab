@@ -837,7 +837,7 @@ GameObject:
   - component: {fileID: 3032065985395272970}
   - component: {fileID: 5382643921584732458}
   - component: {fileID: 6384088903811419884}
-  - component: {fileID: 4841335466655752658}
+  - component: {fileID: 4363873124843153809}
   m_Layer: 0
   m_Name: Tiles (5)
   m_TagString: Untagged
@@ -934,7 +934,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4841335466655752658
+--- !u!114 &4363873124843153809
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -943,12 +943,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 994868631004028383}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &1005809214237227860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2281,7 +2283,7 @@ GameObject:
   - component: {fileID: 4200676118314213803}
   - component: {fileID: 3536184277874735909}
   - component: {fileID: 2000151032757142702}
-  - component: {fileID: 8449419225691636186}
+  - component: {fileID: 879388913133205964}
   m_Layer: 0
   m_Name: Tiles (7)
   m_TagString: Untagged
@@ -2378,7 +2380,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8449419225691636186
+--- !u!114 &879388913133205964
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2387,12 +2389,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2289134345954260600}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &2303775080662117249
 GameObject:
   m_ObjectHideFlags: 0
@@ -3660,13 +3664,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3411974263304263363}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 20.04, y: -0.4, z: 0}
   m_LocalScale: {x: 134.99998, y: 134.99998, z: 3.378458}
   m_Children: []
   m_Father: {fileID: 5051771939242283333}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!33 &63442209344473611
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8260,7 +8264,7 @@ GameObject:
   - component: {fileID: 1224960641950722922}
   - component: {fileID: 8236066262033722249}
   - component: {fileID: 1797125381718233484}
-  - component: {fileID: 5435669972834979533}
+  - component: {fileID: 8407020695474082531}
   m_Layer: 0
   m_Name: Tiles (12)
   m_TagString: Untagged
@@ -8357,7 +8361,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5435669972834979533
+--- !u!114 &8407020695474082531
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8366,12 +8370,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7125708247231813763}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f90a0dca094ca24089c47f9d24241a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  sendToTileNum: 17
+  sendToMapLayer: 1
 --- !u!1 &7195623372437178279
 GameObject:
   m_ObjectHideFlags: 0
@@ -9378,7 +9384,7 @@ GameObject:
   - component: {fileID: 3147068674943885119}
   - component: {fileID: 8114491093678395402}
   - component: {fileID: 951892096030284207}
-  - component: {fileID: 8888147696556409244}
+  - component: {fileID: 1490651584820812555}
   m_Layer: 0
   m_Name: Tiles (11)
   m_TagString: Untagged
@@ -9475,7 +9481,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8888147696556409244
+--- !u!114 &1490651584820812555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9484,12 +9490,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7863753684549556419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &7883505820911471490
 GameObject:
   m_ObjectHideFlags: 0
@@ -10340,13 +10348,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8680595825297260715}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -22.91, y: -0.4, z: 0}
   m_LocalScale: {x: 134.99998, y: 134.99998, z: 3.378458}
   m_Children: []
   m_Father: {fileID: 5051771939242283333}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!33 &4918287608791205118
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -10532,7 +10540,7 @@ GameObject:
   - component: {fileID: 4541610669516541888}
   - component: {fileID: 1405198198769519563}
   - component: {fileID: 1403973251092668891}
-  - component: {fileID: 2896967358960348648}
+  - component: {fileID: 3863309800106142805}
   m_Layer: 0
   m_Name: Tiles (4)
   m_TagString: Untagged
@@ -10629,7 +10637,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2896967358960348648
+--- !u!114 &3863309800106142805
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10638,12 +10646,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8975281508636869341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &9113901715579021308
 GameObject:
   m_ObjectHideFlags: 0
