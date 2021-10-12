@@ -183,7 +183,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 3d63a171cfdf0f047abb13907194cf81, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 1375058160812069656}
   - component: {fileID: 153951169581614137}
   - component: {fileID: 6702584403725924843}
-  - component: {fileID: 5193027859180165285}
+  - component: {fileID: 6976185374844647886}
   m_Layer: 0
   m_Name: Tiles (18)
   m_TagString: Untagged
@@ -266,7 +266,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -314,7 +314,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5193027859180165285
+--- !u!114 &6976185374844647886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -323,12 +323,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 531330349811904321}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &547060786942556155
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,7 +467,7 @@ GameObject:
   - component: {fileID: 3941997782970795474}
   - component: {fileID: 161438393691870181}
   - component: {fileID: 1002603274753939111}
-  - component: {fileID: 2653477605539624598}
+  - component: {fileID: 6349282369814026217}
   m_Layer: 0
   m_Name: Tiles (19)
   m_TagString: Untagged
@@ -514,7 +516,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -562,7 +564,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2653477605539624598
+--- !u!114 &6349282369814026217
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -571,12 +573,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 626370168498146955}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &821897025941973527
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,7 +593,7 @@ GameObject:
   - component: {fileID: 286031974991420138}
   - component: {fileID: 7562736328815411577}
   - component: {fileID: 8845855022507154686}
-  - component: {fileID: 5115272521390894894}
+  - component: {fileID: 1525325403482328862}
   m_Layer: 0
   m_Name: Tiles (27)
   m_TagString: Untagged
@@ -638,7 +642,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -686,7 +690,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5115272521390894894
+--- !u!114 &1525325403482328862
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -695,12 +699,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 821897025941973527}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &933828831561001347
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +735,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933828831561001347}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.93, y: 4.48, z: 0}
+  m_LocalPosition: {x: -12.86, y: 4.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
@@ -886,7 +892,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1141,7 +1147,6 @@ Transform:
   - {fileID: 559847775279394738}
   - {fileID: 7472663631695263496}
   - {fileID: 6956196683733639291}
-  - {fileID: 6180135674135612662}
   - {fileID: 6246751030725021277}
   - {fileID: 4017778792467676977}
   - {fileID: 4625450609179010795}
@@ -1413,7 +1418,7 @@ GameObject:
   - component: {fileID: 3697464982649681502}
   - component: {fileID: 1582269834397391202}
   - component: {fileID: 5275932462935132833}
-  - component: {fileID: 551984261580606172}
+  - component: {fileID: 2038195504520615091}
   m_Layer: 0
   m_Name: Tiles (34)
   m_TagString: Untagged
@@ -1429,7 +1434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376336663372437563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.93, y: 4.48, z: 0}
+  m_LocalPosition: {x: -14.86, y: 4.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
@@ -1462,7 +1467,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1510,7 +1515,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &551984261580606172
+--- !u!114 &2038195504520615091
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1519,12 +1524,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1376336663372437563}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &1478514989523592641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,7 +1792,7 @@ GameObject:
   - component: {fileID: 6364898475313687676}
   - component: {fileID: 4004550186472463173}
   - component: {fileID: 578822098464793168}
-  - component: {fileID: 1204188384816362452}
+  - component: {fileID: 6936068836850315810}
   m_Layer: 0
   m_Name: Tiles (26)
   m_TagString: Untagged
@@ -1834,7 +1841,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1882,7 +1889,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1204188384816362452
+--- !u!114 &6936068836850315810
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1891,12 +1898,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1702643595266541943}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &1928966835253705678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1925,7 +1934,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928966835253705678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.93, y: 4.48, z: 0}
+  m_LocalPosition: {x: -17.859999, y: 4.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
@@ -1958,7 +1967,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2082,7 +2091,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 8947c4414a1aacb41b9f623999066e28, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2175,7 +2184,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2148875176117012641}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.93, y: 4.48, z: 0}
+  m_LocalPosition: {x: -15.86, y: 4.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
@@ -2332,7 +2341,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2458,7 +2467,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 8947c4414a1aacb41b9f623999066e28, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2533,7 +2542,7 @@ GameObject:
   - component: {fileID: 5454391026547146655}
   - component: {fileID: 1271411849221985500}
   - component: {fileID: 8102527589430082367}
-  - component: {fileID: 7559425011533573770}
+  - component: {fileID: 1822767645303821697}
   m_Layer: 0
   m_Name: Tiles (9)
   m_TagString: Untagged
@@ -2582,7 +2591,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2630,7 +2639,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7559425011533573770
+--- !u!114 &1822767645303821697
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2639,12 +2648,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2316487183002611683}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &2330733364596582570
 GameObject:
   m_ObjectHideFlags: 0
@@ -2673,7 +2684,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2330733364596582570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.93, y: 4.48, z: 0}
+  m_LocalPosition: {x: -16.859999, y: 4.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
@@ -2781,7 +2792,7 @@ GameObject:
   - component: {fileID: 3434619989352158138}
   - component: {fileID: 2597362930273128768}
   - component: {fileID: 2676173715186892173}
-  - component: {fileID: 6593238235257258368}
+  - component: {fileID: 5777067964438505797}
   m_Layer: 0
   m_Name: Tiles (12)
   m_TagString: Untagged
@@ -2830,7 +2841,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2878,7 +2889,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6593238235257258368
+--- !u!114 &5777067964438505797
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2887,12 +2898,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2494802380488358467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &2623324477627937191
 GameObject:
   m_ObjectHideFlags: 0
@@ -2905,7 +2918,7 @@ GameObject:
   - component: {fileID: 9007535922521813180}
   - component: {fileID: 4760262907226431017}
   - component: {fileID: 5969301880971959513}
-  - component: {fileID: 2349654459290203684}
+  - component: {fileID: 7396555428727114656}
   m_Layer: 0
   m_Name: Tiles (14)
   m_TagString: Untagged
@@ -2954,7 +2967,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3002,7 +3015,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2349654459290203684
+--- !u!114 &7396555428727114656
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3011,12 +3024,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2623324477627937191}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &2704997267439157956
 GameObject:
   m_ObjectHideFlags: 0
@@ -3029,7 +3044,7 @@ GameObject:
   - component: {fileID: 5760599538940175066}
   - component: {fileID: 3060292730879468146}
   - component: {fileID: 1000325759743894958}
-  - component: {fileID: 7594729123084390090}
+  - component: {fileID: 9194973046631679884}
   m_Layer: 0
   m_Name: Tiles (44)
   m_TagString: Untagged
@@ -3045,11 +3060,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2704997267439157956}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -8.2, y: 0.5, z: 0}
+  m_LocalPosition: {x: -8.119999, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
-  m_RootOrder: 40
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!33 &5760599538940175066
 MeshFilter:
@@ -3078,7 +3093,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3126,7 +3141,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7594729123084390090
+--- !u!114 &9194973046631679884
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3135,12 +3150,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2704997267439157956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &2844169045081831399
 GameObject:
   m_ObjectHideFlags: 0
@@ -3202,7 +3219,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 8947c4414a1aacb41b9f623999066e28, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3279,7 +3296,7 @@ GameObject:
   - component: {fileID: 7234676799025144846}
   - component: {fileID: 3556319418081380105}
   - component: {fileID: 8594557939380165914}
-  - component: {fileID: 1681735146901658648}
+  - component: {fileID: 6730989754494827458}
   m_Layer: 0
   m_Name: Tiles (20)
   m_TagString: Untagged
@@ -3328,7 +3345,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3376,7 +3393,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1681735146901658648
+--- !u!114 &6730989754494827458
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3385,12 +3402,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2998434290689122170}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &3313001516793227937
 GameObject:
   m_ObjectHideFlags: 0
@@ -3419,11 +3438,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3313001516793227937}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -8.9, y: -1.6, z: 0}
+  m_LocalPosition: {x: -8.82, y: -1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
-  m_RootOrder: 43
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!33 &2555322091862669898
 MeshFilter:
@@ -3698,7 +3717,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 3d63a171cfdf0f047abb13907194cf81, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3779,7 +3798,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 3d63a171cfdf0f047abb13907194cf81, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3813,7 +3832,7 @@ GameObject:
   - component: {fileID: 8421495023378565871}
   - component: {fileID: 6373226138297379340}
   - component: {fileID: 7199383480445653953}
-  - component: {fileID: 6919719914472455647}
+  - component: {fileID: 4066668188921707242}
   m_Layer: 0
   m_Name: Tiles (25)
   m_TagString: Untagged
@@ -3862,7 +3881,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3910,7 +3929,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6919719914472455647
+--- !u!114 &4066668188921707242
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3919,12 +3938,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3756852821706031001}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &3794785248656481266
 GameObject:
   m_ObjectHideFlags: 0
@@ -3953,11 +3974,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3794785248656481266}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -10.3, y: -3, z: 0}
+  m_LocalPosition: {x: -10.22, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
-  m_RootOrder: 45
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!33 &3121410029052688177
 MeshFilter:
@@ -4060,8 +4081,8 @@ GameObject:
   - component: {fileID: 4076899910539087273}
   - component: {fileID: 5533228281569606346}
   - component: {fileID: 5792737332164516873}
-  - component: {fileID: 1390416392351885150}
   - component: {fileID: 6615803867216297719}
+  - component: {fileID: 4707260458992031240}
   m_Layer: 0
   m_Name: Tiles (37)
   m_TagString: Untagged
@@ -4077,7 +4098,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3802728337984640723}
   m_LocalRotation: {x: -0, y: -0, z: -0.97999936, w: -0.19900055}
-  m_LocalPosition: {x: -12.23, y: 4.402, z: 0}
+  m_LocalPosition: {x: -12.14, y: 4.402, z: 0}
   m_LocalScale: {x: 45, y: 45, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
@@ -4110,7 +4131,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 85d3a9a9a82d96e43a10f6056a22e57e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4132,21 +4153,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1390416392351885150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3802728337984640723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileName: 
-  selected: 0
-  selectedPlayerName: 
 --- !u!60 &6615803867216297719
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4175,6 +4181,23 @@ PolygonCollider2D:
     - - {x: 0, y: 0.01}
       - {x: 0.01, y: -0.01}
       - {x: -0.010167776, y: -0.010196647}
+--- !u!114 &4707260458992031240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3802728337984640723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f90a0dca094ca24089c47f9d24241a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileName: 
+  selected: 0
+  selectedPlayerName: 
+  sendToTileNum: 18
+  sendToMapLayer: 0
 --- !u!1 &3840530903629373998
 GameObject:
   m_ObjectHideFlags: 0
@@ -4187,7 +4210,7 @@ GameObject:
   - component: {fileID: 120633369945603360}
   - component: {fileID: 8854699597731399400}
   - component: {fileID: 6215526210256685245}
-  - component: {fileID: 4990370924542734828}
+  - component: {fileID: 507649541806174154}
   m_Layer: 0
   m_Name: Tiles (35)
   m_TagString: Untagged
@@ -4203,7 +4226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3840530903629373998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.93, y: 4.48, z: 0}
+  m_LocalPosition: {x: -13.86, y: 4.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
@@ -4236,7 +4259,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4284,7 +4307,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4990370924542734828
+--- !u!114 &507649541806174154
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4293,12 +4316,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3840530903629373998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &3873038903900529682
 GameObject:
   m_ObjectHideFlags: 0
@@ -4683,7 +4708,7 @@ GameObject:
   - component: {fileID: 3002760379653167291}
   - component: {fileID: 2362753179600632531}
   - component: {fileID: 7804137815557414156}
-  - component: {fileID: 3728527402492364013}
+  - component: {fileID: 6046204235749733645}
   m_Layer: 0
   m_Name: Tiles (51)
   m_TagString: Untagged
@@ -4699,11 +4724,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3983291461003103090}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -11.7, y: -4.4, z: 0}
+  m_LocalPosition: {x: -11.62, y: -4.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
-  m_RootOrder: 47
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!33 &3002760379653167291
 MeshFilter:
@@ -4732,7 +4757,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4780,7 +4805,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3728527402492364013
+--- !u!114 &6046204235749733645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4789,12 +4814,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3983291461003103090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &4088363999150510891
 GameObject:
   m_ObjectHideFlags: 0
@@ -4854,7 +4881,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 3d63a171cfdf0f047abb13907194cf81, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4937,7 +4964,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 8947c4414a1aacb41b9f623999066e28, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5014,7 +5041,7 @@ GameObject:
   - component: {fileID: 1713516114134009895}
   - component: {fileID: 2946882600041612284}
   - component: {fileID: 2351268638730902237}
-  - component: {fileID: 901934529647181730}
+  - component: {fileID: 947325675919046309}
   m_Layer: 0
   m_Name: Tiles (29)
   m_TagString: Untagged
@@ -5063,7 +5090,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 85d3a9a9a82d96e43a10f6056a22e57e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5111,7 +5138,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &901934529647181730
+--- !u!114 &947325675919046309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5120,12 +5147,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4250440437390749161}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f90a0dca094ca24089c47f9d24241a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  sendToTileNum: 40
+  sendToMapLayer: 1
 --- !u!1 &4326748685512235663
 GameObject:
   m_ObjectHideFlags: 0
@@ -5187,7 +5216,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 9a318a8d05f65f343b90a32527281f57, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5261,8 +5290,8 @@ GameObject:
   - component: {fileID: 5667433380238112815}
   - component: {fileID: 675634415544867741}
   - component: {fileID: 2373344101118149136}
-  - component: {fileID: 2823287938133686880}
   - component: {fileID: 420011511186376342}
+  - component: {fileID: 2165413144656547974}
   m_Layer: 0
   m_Name: Tiles (33)
   m_TagString: Untagged
@@ -5278,7 +5307,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4345855929626946224}
   m_LocalRotation: {x: 0, y: 0, z: -0.97595674, w: 0.21796441}
-  m_LocalPosition: {x: -20.63, y: 4.39, z: 0}
+  m_LocalPosition: {x: -20.6, y: 4.39, z: 0}
   m_LocalScale: {x: 45, y: 45, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
@@ -5311,7 +5340,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 85d3a9a9a82d96e43a10f6056a22e57e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5333,21 +5362,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2823287938133686880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4345855929626946224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileName: 
-  selected: 0
-  selectedPlayerName: 
 --- !u!60 &420011511186376342
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5376,6 +5390,23 @@ PolygonCollider2D:
     - - {x: 0, y: 0.01}
       - {x: 0.01, y: -0.01}
       - {x: -0.010167776, y: -0.010196647}
+--- !u!114 &2165413144656547974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345855929626946224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f90a0dca094ca24089c47f9d24241a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileName: 
+  selected: 0
+  selectedPlayerName: 
+  sendToTileNum: 11
+  sendToMapLayer: 0
 --- !u!1 &4371148690685754424
 GameObject:
   m_ObjectHideFlags: 0
@@ -5404,11 +5435,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4371148690685754424}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -7.5, y: -0.2, z: 0}
+  m_LocalPosition: {x: -7.42, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
-  m_RootOrder: 41
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!33 &4105298991001535925
 MeshFilter:
@@ -5437,7 +5468,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 8947c4414a1aacb41b9f623999066e28, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5561,7 +5592,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 9a318a8d05f65f343b90a32527281f57, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5652,11 +5683,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4716521528020496105}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -11, y: -3.7, z: 0}
+  m_LocalPosition: {x: -10.92, y: -3.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
-  m_RootOrder: 46
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!33 &6002953182682495291
 MeshFilter:
@@ -5776,7 +5807,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4774874316284445803}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -9.6, y: 1.9, z: 0}
+  m_LocalPosition: {x: -9.5199995, y: 1.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
@@ -5884,7 +5915,7 @@ GameObject:
   - component: {fileID: 930816607251314193}
   - component: {fileID: 2659229048244382859}
   - component: {fileID: 3951619684019625695}
-  - component: {fileID: 2180822912855331925}
+  - component: {fileID: 3153116515631409538}
   m_Layer: 0
   m_Name: Tiles (5)
   m_TagString: Untagged
@@ -5933,7 +5964,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5981,7 +6012,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2180822912855331925
+--- !u!114 &3153116515631409538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5990,12 +6021,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4964449486632075265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &5047348983852731025
 GameObject:
   m_ObjectHideFlags: 0
@@ -6551,7 +6584,7 @@ GameObject:
   - component: {fileID: 2562104086609599190}
   - component: {fileID: 3953964224323659364}
   - component: {fileID: 383956103029623772}
-  - component: {fileID: 6238468755782777847}
+  - component: {fileID: 4148803556146426449}
   m_Layer: 0
   m_Name: Tiles (27)
   m_TagString: Untagged
@@ -6567,7 +6600,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5242077129067717017}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.93, y: 4.48, z: 0}
+  m_LocalPosition: {x: -18.859999, y: 4.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
@@ -6600,7 +6633,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6648,7 +6681,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6238468755782777847
+--- !u!114 &4148803556146426449
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6657,12 +6690,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5242077129067717017}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &5608714304156334380
 GameObject:
   m_ObjectHideFlags: 0
@@ -6770,7 +6805,7 @@ GameObject:
   - component: {fileID: 6876266259109534917}
   - component: {fileID: 3977659125284972388}
   - component: {fileID: 6077401429408147037}
-  - component: {fileID: 2383055504015874971}
+  - component: {fileID: 7018779852859071534}
   m_Layer: 0
   m_Name: Tiles (13)
   m_TagString: Untagged
@@ -6819,7 +6854,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6867,7 +6902,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2383055504015874971
+--- !u!114 &7018779852859071534
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6876,12 +6911,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5765692838278738848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &6028902884209714929
 GameObject:
   m_ObjectHideFlags: 0
@@ -7018,7 +7055,7 @@ GameObject:
   - component: {fileID: 3106957408429408595}
   - component: {fileID: 5090163511119260097}
   - component: {fileID: 4802358756540045382}
-  - component: {fileID: 1031817023907513655}
+  - component: {fileID: 6515606130993379956}
   m_Layer: 0
   m_Name: Tiles (28)
   m_TagString: Untagged
@@ -7067,7 +7104,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7115,7 +7152,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1031817023907513655
+--- !u!114 &6515606130993379956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7124,12 +7161,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6043090154711671164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &6115267423913274581
 GameObject:
   m_ObjectHideFlags: 0
@@ -7142,7 +7181,7 @@ GameObject:
   - component: {fileID: 4262933628772647160}
   - component: {fileID: 5656040967090632109}
   - component: {fileID: 1942747389947698579}
-  - component: {fileID: 6424544798092853278}
+  - component: {fileID: 2252155013779369754}
   m_Layer: 0
   m_Name: Tiles (10)
   m_TagString: Untagged
@@ -7239,7 +7278,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6424544798092853278
+--- !u!114 &2252155013779369754
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7248,14 +7287,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6115267423913274581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f90a0dca094ca24089c47f9d24241a1, type: 3}
+  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
-  sendToTileNum: 5
-  sendToMapLayer: 1
 --- !u!1 &6141621116823075340
 GameObject:
   m_ObjectHideFlags: 0
@@ -7267,8 +7304,8 @@ GameObject:
   - component: {fileID: 2979012302182859717}
   - component: {fileID: 5461526317295941840}
   - component: {fileID: 6629934887006604297}
-  - component: {fileID: 995128444459600093}
   - component: {fileID: 8304535166504920854}
+  - component: {fileID: 1041375917586347872}
   m_Layer: 0
   m_Name: Tiles (31)
   m_TagString: Untagged
@@ -7283,13 +7320,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6141621116823075340}
-  m_LocalRotation: {x: -0, y: -0, z: -0.22414413, w: -0.974556}
-  m_LocalPosition: {x: -12.23, y: -4.85, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.2212486, w: -0.97521746}
+  m_LocalPosition: {x: -12.21, y: -4.84, z: 0}
   m_LocalScale: {x: 45, y: 45, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -334.095}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -334.435}
 --- !u!33 &5461526317295941840
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7317,7 +7354,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 85d3a9a9a82d96e43a10f6056a22e57e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7339,21 +7376,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &995128444459600093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6141621116823075340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileName: 
-  selected: 0
-  selectedPlayerName: 
 --- !u!60 &8304535166504920854
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7382,6 +7404,23 @@ PolygonCollider2D:
     - - {x: 0, y: 0.01}
       - {x: 0.01, y: -0.01}
       - {x: -0.010167776, y: -0.010196647}
+--- !u!114 &1041375917586347872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6141621116823075340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f90a0dca094ca24089c47f9d24241a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileName: 
+  selected: 0
+  selectedPlayerName: 
+  sendToTileNum: 26
+  sendToMapLayer: 0
 --- !u!1 &6145353825844654781
 GameObject:
   m_ObjectHideFlags: 0
@@ -7517,8 +7556,8 @@ GameObject:
   - component: {fileID: 1092171588893911794}
   - component: {fileID: 2463831314525994457}
   - component: {fileID: 2218710675995149451}
-  - component: {fileID: 7952187840293113938}
   - component: {fileID: 167194565060286671}
+  - component: {fileID: 456282386414402389}
   m_Layer: 0
   m_Name: Tiles (32)
   m_TagString: Untagged
@@ -7567,7 +7606,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 85d3a9a9a82d96e43a10f6056a22e57e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7589,21 +7628,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7952187840293113938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6227957611688513012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileName: 
-  selected: 0
-  selectedPlayerName: 
 --- !u!60 &167194565060286671
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7632,6 +7656,23 @@ PolygonCollider2D:
     - - {x: 0, y: 0.01}
       - {x: 0.01, y: -0.01}
       - {x: -0.010167776, y: -0.010196647}
+--- !u!114 &456282386414402389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6227957611688513012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f90a0dca094ca24089c47f9d24241a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileName: 
+  selected: 0
+  selectedPlayerName: 
+  sendToTileNum: 3
+  sendToMapLayer: 0
 --- !u!1 &6607325710432314742
 GameObject:
   m_ObjectHideFlags: 0
@@ -7660,7 +7701,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6607325710432314742}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -10.3, y: 2.6, z: 0}
+  m_LocalPosition: {x: -10.22, y: 2.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
@@ -7768,7 +7809,7 @@ GameObject:
   - component: {fileID: 8093635431711191896}
   - component: {fileID: 8840661241214053746}
   - component: {fileID: 8999333602589065484}
-  - component: {fileID: 6769736094614459117}
+  - component: {fileID: 7370120159054308271}
   m_Layer: 0
   m_Name: Tiles (6)
   m_TagString: Untagged
@@ -7817,7 +7858,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7865,7 +7906,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6769736094614459117
+--- !u!114 &7370120159054308271
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7874,12 +7915,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6695804468109172913}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &6773666052984397528
 GameObject:
   m_ObjectHideFlags: 0
@@ -7892,7 +7935,7 @@ GameObject:
   - component: {fileID: 7467922315240130293}
   - component: {fileID: 4606852954209139854}
   - component: {fileID: 8131754427239601425}
-  - component: {fileID: 2114114317562897581}
+  - component: {fileID: 1558339579860456094}
   m_Layer: 0
   m_Name: Tiles (10)
   m_TagString: Untagged
@@ -7941,7 +7984,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7989,7 +8032,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2114114317562897581
+--- !u!114 &1558339579860456094
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7998,12 +8041,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6773666052984397528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &6818724273571047365
 GameObject:
   m_ObjectHideFlags: 0
@@ -8140,7 +8185,7 @@ GameObject:
   - component: {fileID: 2057140023560558106}
   - component: {fileID: 2592985424805126830}
   - component: {fileID: 1034273758052437335}
-  - component: {fileID: 1122406053179475477}
+  - component: {fileID: 1482344929252976654}
   m_Layer: 0
   m_Name: Tiles (22)
   m_TagString: Untagged
@@ -8189,7 +8234,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8237,7 +8282,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1122406053179475477
+--- !u!114 &1482344929252976654
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8246,12 +8291,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7119869666040300949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &7125708247231813763
 GameObject:
   m_ObjectHideFlags: 0
@@ -8313,7 +8360,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 85d3a9a9a82d96e43a10f6056a22e57e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8687,7 +8734,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 8947c4414a1aacb41b9f623999066e28, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8888,7 +8935,7 @@ GameObject:
   - component: {fileID: 1093535697339735404}
   - component: {fileID: 172726045361526325}
   - component: {fileID: 3951401363652105873}
-  - component: {fileID: 8798845750249958431}
+  - component: {fileID: 8884722395964941389}
   m_Layer: 0
   m_Name: Tiles (46)
   m_TagString: Untagged
@@ -8904,11 +8951,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7457341322376543086}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -8.2, y: -0.9, z: 0}
+  m_LocalPosition: {x: -8.12, y: -0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
-  m_RootOrder: 42
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!33 &1093535697339735404
 MeshFilter:
@@ -8937,7 +8984,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8985,7 +9032,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8798845750249958431
+--- !u!114 &8884722395964941389
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8994,12 +9041,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7457341322376543086}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &7548021162976938790
 GameObject:
   m_ObjectHideFlags: 0
@@ -9012,7 +9061,7 @@ GameObject:
   - component: {fileID: 8754288285275343074}
   - component: {fileID: 25687643506034665}
   - component: {fileID: 32093140977264702}
-  - component: {fileID: 8158836972287588158}
+  - component: {fileID: 2823914834567502507}
   m_Layer: 0
   m_Name: Tiles (20)
   m_TagString: Untagged
@@ -9061,7 +9110,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9109,7 +9158,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8158836972287588158
+--- !u!114 &2823914834567502507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9118,12 +9167,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7548021162976938790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &7569049214474570152
 GameObject:
   m_ObjectHideFlags: 0
@@ -9136,7 +9187,7 @@ GameObject:
   - component: {fileID: 4175761193465065393}
   - component: {fileID: 4938291428723822261}
   - component: {fileID: 5036463564318967495}
-  - component: {fileID: 7912649742531190574}
+  - component: {fileID: 7947251644922793140}
   m_Layer: 0
   m_Name: Tiles (17)
   m_TagString: Untagged
@@ -9185,7 +9236,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9233,7 +9284,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7912649742531190574
+--- !u!114 &7947251644922793140
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9242,12 +9293,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7569049214474570152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &7836308327702081117
 GameObject:
   m_ObjectHideFlags: 0
@@ -9309,7 +9362,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 9a318a8d05f65f343b90a32527281f57, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9433,7 +9486,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9510,7 +9563,7 @@ GameObject:
   - component: {fileID: 6149094085851255374}
   - component: {fileID: 7192115073762743812}
   - component: {fileID: 2391634612392370568}
-  - component: {fileID: 3407310593392950645}
+  - component: {fileID: 4869334688265035039}
   m_Layer: 0
   m_Name: Tiles (21)
   m_TagString: Untagged
@@ -9607,7 +9660,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3407310593392950645
+--- !u!114 &4869334688265035039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9683,7 +9736,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 9a318a8d05f65f343b90a32527281f57, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9758,7 +9811,7 @@ GameObject:
   - component: {fileID: 5635174705758848583}
   - component: {fileID: 5354028954211069319}
   - component: {fileID: 7169490855621746724}
-  - component: {fileID: 3851972448278639540}
+  - component: {fileID: 906510735009279867}
   m_Layer: 0
   m_Name: Tiles (38)
   m_TagString: Untagged
@@ -9774,7 +9827,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7923798019209496905}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -11.7, y: 4, z: 0}
+  m_LocalPosition: {x: -11.619999, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
@@ -9807,7 +9860,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9855,7 +9908,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3851972448278639540
+--- !u!114 &906510735009279867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9864,12 +9917,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7923798019209496905}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &8117298258941542466
 GameObject:
   m_ObjectHideFlags: 0
@@ -9898,11 +9953,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8117298258941542466}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -9.6, y: -2.3, z: 0}
+  m_LocalPosition: {x: -9.52, y: -2.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
-  m_RootOrder: 44
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!33 &364190948799038670
 MeshFilter:
@@ -10006,7 +10061,7 @@ GameObject:
   - component: {fileID: 5886011695219666622}
   - component: {fileID: 2773705319795187846}
   - component: {fileID: 4721770759717136109}
-  - component: {fileID: 8943957137214052980}
+  - component: {fileID: 6368363037929609221}
   m_Layer: 0
   m_Name: Tiles (42)
   m_TagString: Untagged
@@ -10022,7 +10077,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8159456311381103603}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -8.9, y: 1.2, z: 0}
+  m_LocalPosition: {x: -8.819999, y: 1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
@@ -10055,7 +10110,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10103,7 +10158,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8943957137214052980
+--- !u!114 &6368363037929609221
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10112,136 +10167,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8159456311381103603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
---- !u!1 &8213531632714966888
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6180135674135612662}
-  - component: {fileID: 8314105845931727252}
-  - component: {fileID: 8391604935853420414}
-  - component: {fileID: 9147756751476274431}
-  - component: {fileID: 4362338771835646512}
-  m_Layer: 0
-  m_Name: Tiles (43)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6180135674135612662
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8213531632714966888}
-  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -8.9, y: 1.2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1005809214357098320}
-  m_RootOrder: 39
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
---- !u!33 &8314105845931727252
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8213531632714966888}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8391604935853420414
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8213531632714966888}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!61 &9147756751476274431
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8213531632714966888}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.00000023841858}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &4362338771835646512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8213531632714966888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileName: 
-  selected: 0
-  selectedPlayerName: 
+  manpower: 0
+  money: 0
 --- !u!1 &8555483660343570692
 GameObject:
   m_ObjectHideFlags: 0
@@ -10301,7 +10234,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 3d63a171cfdf0f047abb13907194cf81, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10382,7 +10315,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 3d63a171cfdf0f047abb13907194cf81, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10432,7 +10365,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8745345356740247044}
   m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -11, y: 3.3, z: 0}
+  m_LocalPosition: {x: -10.919999, y: 3.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
@@ -10589,7 +10522,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ca4c07edb8911d408859037d54f3bee, type: 2}
+  - {fileID: 2100000, guid: 889afb63aa8436c4092478e2c812d0fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10666,7 +10599,7 @@ GameObject:
   - component: {fileID: 8023582092546044343}
   - component: {fileID: 8344509203370416780}
   - component: {fileID: 8019209810539432258}
-  - component: {fileID: 6261072604193077110}
+  - component: {fileID: 3872797787039405200}
   m_Layer: 0
   m_Name: Tiles (26)
   m_TagString: Untagged
@@ -10682,7 +10615,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9113901715579021308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.93, y: 4.48, z: 0}
+  m_LocalPosition: {x: -19.859999, y: 4.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1005809214357098320}
@@ -10763,7 +10696,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6261072604193077110
+--- !u!114 &3872797787039405200
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10772,9 +10705,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9113901715579021308}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd185093d2fcac04ab3a967f5a7f36c9, type: 3}
+  m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tileName: 
   selected: 0
   selectedPlayerName: 
+  manpower: 0
+  money: 0
