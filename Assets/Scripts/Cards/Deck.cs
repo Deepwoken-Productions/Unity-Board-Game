@@ -42,4 +42,5 @@ public class Deck : MonoBehaviour
         Card currentCard = GameObject.Find("Canvas").transform.GetChild(0).gameObject.GetComponent<cardDisplay>().card;
         currentCard = newCard;
     }
+
 }

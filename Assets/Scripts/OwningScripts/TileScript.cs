@@ -25,9 +25,9 @@ public class TileScript : MonoBehaviour
         meshRenderer = transform.gameObject.GetComponent<MeshRenderer>();
     }
 
-    public void TextureTile(Material texture)
+    public void TextureTile(Color color)
     {
-        meshRenderer.material = texture;
+        meshRenderer.material.color = color;
     }
 
     public virtual void ActivateTile(PlayersScript player) {}

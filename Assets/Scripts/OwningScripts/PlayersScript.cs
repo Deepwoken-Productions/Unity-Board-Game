@@ -9,24 +9,91 @@ public class PlayersScript : MonoBehaviour
     //Declaring variables
     private Transform[] tileOrder;
 
+    [SerializeField]
+    private short money = 0;
+
+    public short Money
+    {
+        get { return money; }
+    }
+
+
+    [SerializeField]
+    private short troops = 0;
+
+    public short Troops
+    {
+        get { return troops; }
+    }
+
+    //Read only means it can be defined, but ONLY ONCE.
+    public string userName;
+
     public byte playerCurrentTile = 0;
     private byte iteratorCurrentTile = 0;
     public byte defaultMapLayer;
 
     private int currentDiceRoll;
-    public int zOffset;
+    public byte zOffset;
     private bool isMoving;
+    public bool isTurn;
 
     private Camera mainCamera;
 
     public float movementInterval;
 
     private Vector3 playerMoveToPosition = Vector3.zero;
+    public Vector3 playerPositionOnTile = Vector3.zero;
+
     private Vector2 currentMousePosition;
     InputMaps userInputMap;
 
-    public Material highlightMaterial;
-    public Material tileMaterial;
+    public Color highlightMaterial;
+    public Color tileMaterial;
+
+    public void UpdateTroops(int val)
+    {
+        troops += (short)val;
+    }
+
+    public void UpdateMoney(short val)
+    {
+        money += val;
+    }
+
+    public byte Battle(PlayersScript enemy)
+    {
+        short tempFriendlyTroops = troops;
+        int diceRoll;
+
+        //This value is the divisor
+        int giveDice = 1000;
+
+        short multiplyer = -100;
+
+        diceRoll = DiceScript.instance.RollDice(Mathf.CeilToInt(enemy.troops / giveDice));
+        UpdateTroops(diceRoll * multiplyer);
+
+        diceRoll = DiceScript.instance.RollDice(Mathf.CeilToInt(tempFriendlyTroops / giveDice));
+        enemy.UpdateTroops(diceRoll * multiplyer);
+
+
+        if (CheckIsAlive())
+        {
+            return 2;
+        }
+        else if (enemy.CheckIsAlive())
+        {
+            return 1;
+        }
+
+        return 0;
+    }
+
+    public bool CheckIsAlive()
+    {
+        return true;
+    }
 
 
     private void OnEnable()
@@ -72,7 +139,7 @@ public class PlayersScript : MonoBehaviour
             if (raycastResults)
             {
                 //If the player or the iterator is not currently moving
-                if (!isMoving)
+                if (!isMoving && isTurn)
                 {
                     //Player clicked tile is the index in the tileOrder array of the tile the player clicked on
                     int playerClickedTile = -1;
@@ -128,11 +195,16 @@ public class PlayersScript : MonoBehaviour
         //When the player right clicks their mouse do stuff
         userInputMap.KeyboardAndMouse.RightClick.performed += ctx =>
         {
-            //Rolling 2 dice
-            currentDiceRoll = DiceScript.instance.RollDice(2);
+            if (isTurn && !isMoving)
+            {
+                //Rolling 2 dice
+                currentDiceRoll = DiceScript.instance.RollDice(2);
 
-            //Highlighting the tiles that the player can move to
-            StartCoroutine(IterateOverTiles(true, currentDiceRoll));
+                //Highlighting the tiles that the player can move to
+                StartCoroutine(IterateOverTiles(true, currentDiceRoll));
+
+                Debug.Log(userName + "Has Right clicked");
+            }
         };
 
         //When the player moves their mouse, update currentMousePosition
@@ -150,8 +222,6 @@ public class PlayersScript : MonoBehaviour
     //If highlightTiles is true then tiles will be highlighted, if not player will move
     IEnumerator IterateOverTiles(bool highlightTiles, int diceRoll)
     {
-        if (!isMoving)
-        {
             //Starting the debounce
             isMoving = true;
 
@@ -161,7 +231,7 @@ public class PlayersScript : MonoBehaviour
             //Setting an internal dice roll counter to the dice roll specified, this dice roll counter will be incremented
             int diceRollCounter = diceRoll;
 
-            Debug.Log("You rolled a " + diceRoll + " im so proud of you UwU");
+            Debug.Log(userName + " rolled a " + diceRoll + " im so proud of you UwU");
 
             //Unhighlights all selected tiles and deselects all tiles
             for (int i = 0; i < tileOrder.Length; i++)
@@ -192,7 +262,7 @@ public class PlayersScript : MonoBehaviour
                     {
                         playerCurrentTile = 0;
                     }
-
+                Debug.Log("MOVING");
                     //Moves the player to the position of the next tile
                     playerMoveToPosition = tileOrder[playerCurrentTile].position;
                 }
@@ -214,12 +284,17 @@ public class PlayersScript : MonoBehaviour
                     HighlightSelectTiles(true, transform.name, tileScript);
                 }
             }
-
-            //Ending the debounce
-            isMoving = false;
+        if (!highlightTiles)
+        {
+            //Calls the tiles activate function
+            Debug.Log(userName + "Has Ended their turn");
             tileOrder[playerCurrentTile].GetComponent<TileScript>().ActivateTile(this);
+            TileOrderScript.instance.NextTurn();
         }
+        isMoving = false;
+        
     }
+    
 
     public void UpdatePlayerPosition()
     {
@@ -227,9 +302,10 @@ public class PlayersScript : MonoBehaviour
         if(playerMoveToPosition != Vector3.zero)
         {
             //Move the player there and set the move to position as zero, might do some lerping here
-            transform.position = new Vector3(playerMoveToPosition.x, playerMoveToPosition.y, zOffset);
+            transform.position = playerMoveToPosition + playerPositionOnTile;
             playerMoveToPosition = Vector3.zero;
         }
+        
     }
 
     //Highlights and selects tiles, pretty self explanatory code
