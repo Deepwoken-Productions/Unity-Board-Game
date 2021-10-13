@@ -7164,7 +7164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be8f2e8c7c80ee5498129979d19d41bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileName: 
+  tileName: Ribbany
   selected: 0
   selectedPlayerName: 
   manpower: 0
