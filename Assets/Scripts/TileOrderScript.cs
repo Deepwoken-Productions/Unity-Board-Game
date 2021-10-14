@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //This is a singleton script, that means there is
 //only meant to be one instance of these in the entire game OwO
@@ -20,7 +21,10 @@ public class TileOrderScript : MonoBehaviour
 
     public List<PlayersScript> players;
 
+    //Make not seriealized. Or get set.
     public Transform currentPlayer;
+
+    public Transform UI;
 
     public Transform playerHoldingObject;
     //this value keep track of two things. 1) Who's turn it is (turncount % playercount) 2) turn count lol
@@ -82,16 +86,29 @@ public class TileOrderScript : MonoBehaviour
         {
             Debug.Log(ps.userName);
         }
+        UpdateUI();
     }
 
     public void NextTurn()
     {
         players[turnCount % players.Count].isTurn = false;
-        Debug.Log(players[turnCount % players.Count].userName +": " +  players[turnCount % players.Count].isTurn);
         players[++turnCount % players.Count].isTurn = true;
-        Debug.Log(players[turnCount % players.Count].userName + ": " + players[turnCount % players.Count].isTurn);
 
         currentPlayer = players[turnCount % players.Count].transform;
+        UpdateUI();
+    }
+
+    void UpdateUI()
+    {
+        //Bad code, but I'm too lazy to do this right. -- Needa make a public int start or read the names otherwise
+        for (int i = 3; i < UI.childCount && i < players.Count + 3; i++)
+        {
+            UI.GetChild(i).GetComponent<Image>().sprite = players[(turnCount + i - 3) % players.Count].playerBacking;
+            UI.GetChild(i).GetChild(0).GetComponent<Text>().text = players[(turnCount + i - 3) % players.Count].userName;
+            UI.GetChild(i).GetChild(1).GetComponent<Text>().text = "Troops: " + players[(turnCount + i - 3) % players.Count].Troops;
+            UI.GetChild(i).GetChild(2).GetComponent<Text>().text = "Money: " + players[(turnCount + i - 3) % players.Count].Money;
+            UI.GetChild(i).GetChild(3).GetComponent<Image>().sprite = players[(turnCount + i - 3) % players.Count].crown;
+        }
     }
 
     void InitializePopulateArray()

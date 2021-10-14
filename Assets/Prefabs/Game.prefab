@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1528,7 +1528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1862,8 +1862,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 44f82a7c433635545ac69a0c85a26617, type: 3}
+  m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2633,7 +2633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2758,6 +2758,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f169f2d614dd0f4a92f665d8f1ddf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerBacking: {fileID: 21300000, guid: 44f82a7c433635545ac69a0c85a26617, type: 3}
+  crown: {fileID: 21300000, guid: cc553afc589fa5447863e5a8779c4234, type: 3}
   money: 1500
   troops: 500
   userName: Tina
@@ -3865,6 +3867,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f169f2d614dd0f4a92f665d8f1ddf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerBacking: {fileID: 21300000, guid: 44f82a7c433635545ac69a0c85a26617, type: 3}
+  crown: {fileID: 21300000, guid: c1076b9e3768e3a42894e0cbe27a8209, type: 3}
   money: 1500
   troops: 500
   userName: Gene
@@ -4363,6 +4367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f169f2d614dd0f4a92f665d8f1ddf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerBacking: {fileID: 21300000, guid: 44f82a7c433635545ac69a0c85a26617, type: 3}
+  crown: {fileID: 21300000, guid: 3d09a7bb0a5a97e4c8a6bd5def41dc66, type: 3}
   money: 1500
   troops: 500
   userName: Bob
@@ -5416,8 +5422,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 44f82a7c433635545ac69a0c85a26617, type: 3}
+  m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -8556,6 +8562,7 @@ MonoBehaviour:
   - {fileID: 1005809214357098320}
   players: []
   currentPlayer: {fileID: 0}
+  UI: {fileID: 7415271359694113189}
   playerHoldingObject: {fileID: 5051771939927075478}
 --- !u!114 &5051771939770881016
 MonoBehaviour:
@@ -8758,8 +8765,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 44f82a7c433635545ac69a0c85a26617, type: 3}
+  m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -8876,6 +8883,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f169f2d614dd0f4a92f665d8f1ddf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerBacking: {fileID: 21300000, guid: 44f82a7c433635545ac69a0c85a26617, type: 3}
+  crown: {fileID: 21300000, guid: 012369c508da8124dbc3620556dd95a7, type: 3}
   money: 1500
   troops: 500
   userName: Linda
@@ -9151,7 +9160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9276,6 +9285,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f169f2d614dd0f4a92f665d8f1ddf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerBacking: {fileID: 21300000, guid: 44f82a7c433635545ac69a0c85a26617, type: 3}
+  crown: {fileID: 21300000, guid: 365b485c057c3464ea95ddcabc330a3e, type: 3}
   money: 1500
   troops: 500
   userName: Jim
@@ -9936,8 +9947,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 44f82a7c433635545ac69a0c85a26617, type: 3}
+  m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -12053,8 +12064,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 44f82a7c433635545ac69a0c85a26617, type: 3}
+  m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -12497,7 +12508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13201,6 +13212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f169f2d614dd0f4a92f665d8f1ddf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerBacking: {fileID: 21300000, guid: 44f82a7c433635545ac69a0c85a26617, type: 3}
+  crown: {fileID: 21300000, guid: 3de27f55ca4e6404183a5ab627834874, type: 3}
   money: 1500
   troops: 500
   userName: Louise
@@ -13762,7 +13775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
