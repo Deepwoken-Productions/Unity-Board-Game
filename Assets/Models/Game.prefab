@@ -2684,6 +2684,7 @@ MonoBehaviour:
   userName: Tina
   playerCurrentTile: 0
   defaultMapLayer: 0
+  mouseSensitivity: 5
   zOffset: 0
   isTurn: 0
   movementInterval: 0.1
@@ -3981,6 +3982,7 @@ MonoBehaviour:
   userName: Gene
   playerCurrentTile: 0
   defaultMapLayer: 0
+  mouseSensitivity: 5
   zOffset: 0
   isTurn: 0
   movementInterval: 0.1
@@ -4478,6 +4480,7 @@ MonoBehaviour:
   userName: Bob
   playerCurrentTile: 0
   defaultMapLayer: 0
+  mouseSensitivity: 5
   zOffset: 0
   isTurn: 0
   movementInterval: 0.1
@@ -8577,6 +8580,7 @@ MonoBehaviour:
   - {fileID: 5051771939384741315}
   - {fileID: 1005809214357098320}
   players: []
+  currentPlayer: {fileID: 0}
   playerHoldingObject: {fileID: 5051771939927075478}
 --- !u!114 &5051771939770881016
 MonoBehaviour:
@@ -8649,7 +8653,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 125
   orthographic: 1
   orthographic size: 16
   m_Depth: -1
@@ -8903,6 +8907,7 @@ MonoBehaviour:
   userName: Linda
   playerCurrentTile: 0
   defaultMapLayer: 0
+  mouseSensitivity: 5
   zOffset: 0
   isTurn: 0
   movementInterval: 0.1
@@ -9302,6 +9307,7 @@ MonoBehaviour:
   userName: Jim
   playerCurrentTile: 0
   defaultMapLayer: 0
+  mouseSensitivity: 5
   zOffset: 0
   isTurn: 0
   movementInterval: 0.1
@@ -13226,6 +13232,7 @@ MonoBehaviour:
   userName: Louise
   playerCurrentTile: 0
   defaultMapLayer: 0
+  mouseSensitivity: 5
   zOffset: 0
   isTurn: 0
   movementInterval: 0.1

@@ -9,6 +9,9 @@ public class PlayersScript : MonoBehaviour
     //Declaring variables
     private Transform[] tileOrder;
 
+    private Vector3 defaultCameraPosition;
+    private float defaultCameraSize;
+
     [SerializeField]
     private short money = 0;
 
@@ -33,10 +36,15 @@ public class PlayersScript : MonoBehaviour
     private byte iteratorCurrentTile = 0;
     public byte defaultMapLayer;
 
+    public float mouseSensitivity;
+
     private int currentDiceRoll;
     public byte zOffset;
     private bool isMoving;
     public bool isTurn;
+
+    float zoom;
+    float zoomDelta;
 
     private Camera mainCamera;
 
@@ -50,6 +58,8 @@ public class PlayersScript : MonoBehaviour
 
     public Color highlightMaterial;
     public Color tileMaterial;
+
+    Vector3 destinationPosition;
 
     public void UpdateTroops(int val)
     {
@@ -124,6 +134,9 @@ public class PlayersScript : MonoBehaviour
         //Initializing variables
         tileOrder = TileOrderScript.instance.tileOrders[defaultMapLayer];
         mainCamera = TileOrderScript.instance.mainCamera;
+
+        defaultCameraPosition = mainCamera.transform.position;
+        defaultCameraSize = mainCamera.orthographicSize;
 
         //Moving the player into the "root" tile
         TeleportToPos(defaultMapLayer);
@@ -211,12 +224,54 @@ public class PlayersScript : MonoBehaviour
         userInputMap.KeyboardAndMouse.MousePosition.performed += ctx => {
             currentMousePosition = mainCamera.ScreenToWorldPoint(ctx.ReadValue<Vector2>());
         };
+
+        userInputMap.KeyboardAndMouse.Zoom.performed += ctx => {
+            zoomDelta += ctx.ReadValue<Vector2>().y;
+            zoomDelta = Mathf.Clamp(zoomDelta, -1, 1);
+
+            if(zoomDelta == 1)
+            {
+                destinationPosition = TileOrderScript.instance.currentPlayer.position;
+            }
+            else if(zoomDelta == -1)
+            {
+                destinationPosition = defaultCameraPosition;
+            }
+            else
+            {
+                destinationPosition = Vector3.zero;
+            }
+        };
     }
 
     void Update()
     {
         //Updating the player's position every frame
         UpdatePlayerPosition();
+
+        if(destinationPosition != Vector3.zero)
+        {
+            Vector3 moveToPos = Vector3.MoveTowards(mainCamera.transform.position, new Vector3(destinationPosition.x, destinationPosition.y, -10), 0.1f);
+
+            mainCamera.transform.position = moveToPos;
+
+            if(destinationPosition == TileOrderScript.instance.currentPlayer.position)
+            {
+                if(mainCamera.orthographicSize >= 3)
+                {
+                    mainCamera.orthographicSize -= 0.1f;
+                }
+            }
+            else
+            {
+                if (mainCamera.orthographicSize <= 17)
+                {
+                    mainCamera.orthographicSize += 0.1f;
+                }
+            }
+
+            destinationPosition = Vector3.zero;
+        }
     }
 
     //If highlightTiles is true then tiles will be highlighted, if not player will move
