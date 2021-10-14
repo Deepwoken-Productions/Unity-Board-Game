@@ -14,6 +14,8 @@ public class TileOrderScript : MonoBehaviour
     //Setting where the tiles are located and declaring a transform array named tileOrder
     public Camera mainCamera;
 
+    public BattleScript battle;
+
     public List<Transform[]> tileOrders;
 
     public Transform[] maps;
@@ -28,7 +30,7 @@ public class TileOrderScript : MonoBehaviour
 
     public Transform playerHoldingObject;
     //this value keep track of two things. 1) Who's turn it is (turncount % playercount) 2) turn count lol
-    ushort turnCount = 0;
+    public ushort turnCount = 0;
 
 
 
@@ -96,6 +98,7 @@ public class TileOrderScript : MonoBehaviour
 
         currentPlayer = players[turnCount % players.Count].transform;
         UpdateUI();
+        battle.PlayerLoop();
     }
 
     void UpdateUI()
