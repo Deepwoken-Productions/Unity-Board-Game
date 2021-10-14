@@ -5,7 +5,7 @@ using UnityEngine;
 //The script that allows the player to do stuff
 public class PlayersScript : MonoBehaviour
 {
-
+    
     //Declaring variables
     private Transform[] tileOrder;
 
@@ -76,7 +76,7 @@ public class PlayersScript : MonoBehaviour
 
         diceRoll = DiceScript.instance.RollDice(Mathf.CeilToInt(tempFriendlyTroops / giveDice));
         enemy.UpdateTroops(diceRoll * multiplyer);
-
+        Debug.Log("Fight");
 
         if (CheckIsAlive())
         {

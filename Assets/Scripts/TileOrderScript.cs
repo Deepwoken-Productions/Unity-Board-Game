@@ -16,12 +16,12 @@ public class TileOrderScript : MonoBehaviour
     public List<Transform[]> tileOrders;
 
     public Transform[] maps;
-
+    public BattleScript battle;
 
     public List<PlayersScript> players;
     public Transform playerHoldingObject;
     //this value keep track of two things. 1) Who's turn it is (turncount % playercount) 2) turn count lol
-    ushort turnCount = 0;
+    public ushort turnCount = 0;
 
 
 
@@ -86,6 +86,9 @@ public class TileOrderScript : MonoBehaviour
         Debug.Log(players[turnCount % players.Count].userName +": " +  players[turnCount % players.Count].isTurn);
         players[++turnCount % players.Count].isTurn = true;
         Debug.Log(players[turnCount % players.Count].userName + ": " + players[turnCount % players.Count].isTurn);
+
+        battle.PlayerLoop();
+
     }
 
     void InitializePopulateArray()
