@@ -12,6 +12,10 @@ public class PlayersScript : MonoBehaviour
     private Vector3 defaultCameraPosition;
     private float defaultCameraSize;
 
+    public Sprite playerBacking;
+    //Please not this does not affect the play in game model cus I'm lazy
+    public Sprite crown;
+
     [SerializeField]
     private short money = 0;
 

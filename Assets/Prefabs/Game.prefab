@@ -6475,7 +6475,7 @@ GameObject:
   - component: {fileID: 3249133575558395619}
   - component: {fileID: 236686047678188650}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8429,8 +8429,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5051771939780131249}
   - {fileID: 5051771939770881014}
+  - {fileID: 5051771939780131249}
   - {fileID: 5051771939384741315}
   - {fileID: 1005809214357098320}
   - {fileID: 5051771939927075478}
@@ -8536,7 +8536,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5051771939242283333}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5051771939770881017
 MonoBehaviour:
@@ -8600,7 +8600,7 @@ Transform:
   m_Children:
   - {fileID: 7415271359694113189}
   m_Father: {fileID: 5051771939242283333}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &5051771939780131150
 Camera:
