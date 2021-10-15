@@ -95,7 +95,6 @@ public class TileOrderScript : MonoBehaviour
     {
         players[turnCount % players.Count].isTurn = false;
         players[++turnCount % players.Count].isTurn = true;
-
         currentPlayer = players[turnCount % players.Count].transform;
         UpdateUI();
         battle.PlayerLoop();
@@ -106,7 +105,6 @@ public class TileOrderScript : MonoBehaviour
         //Bad code, but I'm too lazy to do this right. -- Needa make a public int start or read the names otherwise
         for (int i = 3; i < UI.childCount && i < players.Count + 3; i++)
         {
-            UI.GetChild(i).GetComponent<Image>().sprite = players[(turnCount + i - 3) % players.Count].playerBacking;
             UI.GetChild(i).GetChild(0).GetComponent<Text>().text = players[(turnCount + i - 3) % players.Count].userName;
             UI.GetChild(i).GetChild(1).GetComponent<Text>().text = "Troops: " + players[(turnCount + i - 3) % players.Count].Troops;
             UI.GetChild(i).GetChild(2).GetComponent<Text>().text = "Money: " + players[(turnCount + i - 3) % players.Count].Money;
