@@ -86,10 +86,10 @@ public class PlayersScript : MonoBehaviour
 
         short multiplyer = -100;
 
-        diceRoll = DiceScript.instance.RollDice(Mathf.CeilToInt(enemy.troops / giveDice));
+        diceRoll = DiceScript.instance.RollDice(Mathf.CeilToInt((float)enemy.troops / (float)giveDice));
         UpdateTroops(diceRoll * multiplyer);
 
-        diceRoll = DiceScript.instance.RollDice(Mathf.CeilToInt(tempFriendlyTroops / giveDice));
+        diceRoll = DiceScript.instance.RollDice(Mathf.CeilToInt((float)tempFriendlyTroops / (float)giveDice));
         enemy.UpdateTroops(diceRoll * multiplyer);
 
 
@@ -121,15 +121,14 @@ public class PlayersScript : MonoBehaviour
         enemyLand.troops -= troops;
         UpdateTroops(temp);
 
-        diceRoll = DiceScript.instance.RollDice(Mathf.CeilToInt(troops / giveDice));
+        diceRoll = DiceScript.instance.RollDice(Mathf.CeilToInt((float)troops / (float)giveDice));
 
         UpdateMoney(Mathf.Min(enemyLand.money, diceRoll * moneyMulti));
-
-        diceRoll = DiceScript.instance.RollDice(Mathf.CeilToInt(tempFriendlyTroops / giveDice));
+        Debug.Log("Status: " + enemyLand.money + "<>" + (diceRoll * moneyMulti) + diceRoll);
         enemyLand.troops = diceRoll * multiplyer;
 
 
-        if (CheckIsAlive())
+        if (!CheckIsAlive())
         {
             return 2;
         }

@@ -19,21 +19,14 @@ public class BattleScript : MonoBehaviour
     {
         for(int i = 0; i < TileCheck.Count; i++)
         {
+            Debug.Log("Num - " + i + (TileOrderScript.instance.turnCount % TileOrderScript.instance.players.Count));
             TileCheck = TileOrderScript.instance.players;
-            Debug.Log(TileCheck[i].playerCurrentTile);
-            for(int p = 0; p < TileCheck.Count; p++)
+            if(TileOrderScript.instance.players[TileOrderScript.instance.turnCount % TileOrderScript.instance.players.Count] != TileCheck[i] && 
+                TileOrderScript.instance.players[TileOrderScript.instance.turnCount % TileOrderScript.instance.players.Count].playerCurrentTile == TileCheck[i].playerCurrentTile &&
+                TileOrderScript.instance.turnCount > TileCheck.Count) // last if is "Moment of peace" rounds
             {
-                if(i != p)
-                {
-                    if(TileOrderScript.instance.turnCount > TileCheck.Count)
-                    {
-                        Debug.Log(TileCheck[p].playerCurrentTile);
-                        if (TileCheck[i].playerCurrentTile == TileCheck[p].playerCurrentTile)
-                        {
-                            TileCheck[i].Battle(TileCheck[p]);
-                        }
-                    }
-                }
+                Debug.Log("trying to fight" + TileOrderScript.instance.players[TileOrderScript.instance.turnCount % TileOrderScript.instance.players.Count].userName + " - " + TileCheck[i].userName);
+                TileOrderScript.instance.players[TileOrderScript.instance.turnCount % TileOrderScript.instance.players.Count].Battle(TileCheck[i]);
             }
         }
     }

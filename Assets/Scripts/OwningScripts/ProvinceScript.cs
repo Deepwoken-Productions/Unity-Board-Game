@@ -38,20 +38,23 @@ public class ProvinceScript : TileScript
             int preTroops = player.Troops;
             int preMoney = player.Money;
             //Would you like to battle this tile? Owned by: Name. Press Y or N.
-            TileOrderScript.instance.UIText.text = "Engaging in a battle against a land Owned by: " + player.userName +". Press space to continue";
+            TileOrderScript.instance.UIText.text = "Engaging in a battle against a land Owned by: " + Owner.userName +". Press space to continue";
             while (!interaction.KeyboardAndMouse.FlipCard.triggered)
             {
                 yield return null;
             }
             if (player.Battle(this) == 1)
             {
-                TileOrderScript.instance.UIText.text = "You won the battle Troops lost: " + (preTroops - player.Troops) + " and gained $" + (preMoney - player.Money) + " The land is now yours and has been reset. Press space to continue";
+                TileOrderScript.instance.UIText.text = "You won the battle Troops lost: " + (preTroops - player.Troops) + " and gained $" + (player.Money - preMoney) + " The land is now yours and has been reset. Press space to continue";
+                UpdateOwner(player);
                 ResetTile();
             }
             else
             {
                 TileOrderScript.instance.UIText.text = "You lost the battle Troops lost: " + (preTroops - player.Troops) + " and gained $" + (preMoney - player.Money) + ". Press space to continue";
             }
+            interaction.Disable();
+            interaction.Enable();
         }
         else if (Owner == player)
         {
