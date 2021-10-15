@@ -481,8 +481,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &547060786942556155
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,8 +734,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &821897025941973527
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,8 +863,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &880350254917348698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,8 +1195,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &1005809214237227860
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,8 +1926,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &1478514989523592641
 GameObject:
   m_ObjectHideFlags: 0
@@ -2450,8 +2465,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &1928966835253705678
 GameObject:
   m_ObjectHideFlags: 0
@@ -2760,6 +2778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crown: {fileID: 21300000, guid: cc553afc589fa5447863e5a8779c4234, type: 3}
+  crownMat: {fileID: 0}
   money: 1500
   troops: 500
   userName: Tina
@@ -3386,8 +3405,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &2303775080662117249
 GameObject:
   m_ObjectHideFlags: 0
@@ -3636,8 +3658,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &2330733364596582570
 GameObject:
   m_ObjectHideFlags: 0
@@ -3871,6 +3896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crown: {fileID: 21300000, guid: c1076b9e3768e3a42894e0cbe27a8209, type: 3}
+  crownMat: {fileID: 0}
   money: 1500
   troops: 500
   userName: Gene
@@ -4010,8 +4036,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &2623324477627937191
 GameObject:
   m_ObjectHideFlags: 0
@@ -4136,8 +4165,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &2704997267439157956
 GameObject:
   m_ObjectHideFlags: 0
@@ -4262,8 +4294,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &2735126755714425774
 GameObject:
   m_ObjectHideFlags: 0
@@ -4373,6 +4408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crown: {fileID: 21300000, guid: 3d09a7bb0a5a97e4c8a6bd5def41dc66, type: 3}
+  crownMat: {fileID: 0}
   money: 1500
   troops: 500
   userName: Bob
@@ -4796,8 +4832,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &3075226282602714315
 GameObject:
   m_ObjectHideFlags: 0
@@ -5482,8 +5521,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &3778479724569562643
 GameObject:
   m_ObjectHideFlags: 0
@@ -5939,8 +5981,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &3873038903900529682
 GameObject:
   m_ObjectHideFlags: 0
@@ -6228,6 +6273,7 @@ RectTransform:
   - {fileID: 8512755455833305042}
   - {fileID: 8519185724848342106}
   - {fileID: 3985822086101330159}
+  - {fileID: 611521052655046145}
   m_Father: {fileID: 5051771939780131249}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6545,8 +6591,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &4182594000287034574
 GameObject:
   m_ObjectHideFlags: 0
@@ -7954,8 +8003,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &5047348983852731025
 GameObject:
   m_ObjectHideFlags: 0
@@ -8230,6 +8282,7 @@ MonoBehaviour:
   players: []
   currentPlayer: {fileID: 0}
   UI: {fileID: 7415271359694113189}
+  UIText: {fileID: 0}
   playerHoldingObject: {fileID: 5051771939927075478}
   turnCount: 0
 --- !u!114 &5051771939770881016
@@ -8572,6 +8625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crown: {fileID: 21300000, guid: 012369c508da8124dbc3620556dd95a7, type: 3}
+  crownMat: {fileID: 0}
   money: 1500
   troops: 500
   userName: Linda
@@ -8711,8 +8765,90 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
+--- !u!1 &5403788367492709945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 611521052655046145}
+  - component: {fileID: 8506836131166542125}
+  - component: {fileID: 921566522771571968}
+  m_Layer: 5
+  m_Name: HelperText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &611521052655046145
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5403788367492709945}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7415271359694113189}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -318, y: 171}
+  m_SizeDelta: {x: 450, y: 120}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8506836131166542125
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5403788367492709945}
+  m_CullTransparentMesh: 1
+--- !u!114 &921566522771571968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5403788367492709945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
 --- !u!1 &5409908120081765912
 GameObject:
   m_ObjectHideFlags: 0
@@ -8976,6 +9112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crown: {fileID: 21300000, guid: 365b485c057c3464ea95ddcabc330a3e, type: 3}
+  crownMat: {fileID: 0}
   money: 1500
   troops: 500
   userName: Jim
@@ -9115,8 +9252,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &6028902884209714929
 GameObject:
   m_ObjectHideFlags: 0
@@ -9365,8 +9505,11 @@ MonoBehaviour:
   tileName: Ribbany
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &6060873833536007104
 GameObject:
   m_ObjectHideFlags: 0
@@ -10359,8 +10502,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &6773666052984397528
 GameObject:
   m_ObjectHideFlags: 0
@@ -10485,8 +10631,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &6789453792720446176
 GameObject:
   m_ObjectHideFlags: 0
@@ -10769,8 +10918,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &7125708247231813763
 GameObject:
   m_ObjectHideFlags: 0
@@ -11519,8 +11671,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &7513573007886489068
 GameObject:
   m_ObjectHideFlags: 0
@@ -11724,8 +11879,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &7569049214474570152
 GameObject:
   m_ObjectHideFlags: 0
@@ -11850,8 +12008,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &7836308327702081117
 GameObject:
   m_ObjectHideFlags: 0
@@ -12175,8 +12336,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &7883505820911471490
 GameObject:
   m_ObjectHideFlags: 0
@@ -12549,8 +12713,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &7955433119123593696
 GameObject:
   m_ObjectHideFlags: 0
@@ -12739,6 +12906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crown: {fileID: 21300000, guid: 3de27f55ca4e6404183a5ab627834874, type: 3}
+  crownMat: {fileID: 0}
   money: 1500
   troops: 500
   userName: Louise
@@ -13081,8 +13249,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &8735942240416569170
 GameObject:
   m_ObjectHideFlags: 0
@@ -13485,8 +13656,11 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0
 --- !u!1 &9113901715579021308
 GameObject:
   m_ObjectHideFlags: 0
@@ -13611,5 +13785,8 @@ MonoBehaviour:
   tileName: 
   selected: 0
   selectedPlayerName: 
-  manpower: 0
+  startingTroops: 50
+  startingMoney: 50
+  troops: 0
   money: 0
+  cost: 0

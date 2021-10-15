@@ -44,6 +44,22 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Yes",
+                    "type": "Button",
+                    "id": "441969d7-1faa-43ec-8940-48eadc8deb1e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
+                },
+                {
+                    "name": "No",
+                    "type": "Button",
+                    "id": "aea83a04-568f-45ab-b3d0-b6e0dbc0f69c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Tap"
                 }
             ],
             "bindings": [
@@ -99,6 +115,28 @@
                     "processors": "",
                     "groups": "PC master race",
                     "action": "Zoom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c833c663-9bcf-4590-84fc-2ea1f916b62c",
+                    "path": "<Keyboard>/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Yes",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "57587231-95c2-42ce-80e6-11e9e65ecbb9",
+                    "path": "<Keyboard>/n",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "No",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

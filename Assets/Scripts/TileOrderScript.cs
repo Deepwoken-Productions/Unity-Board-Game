@@ -28,6 +28,8 @@ public class TileOrderScript : MonoBehaviour
 
     public Transform UI;
 
+    public Text UIText;
+
     public Transform playerHoldingObject;
     //this value keep track of two things. 1) Who's turn it is (turncount % playercount) 2) turn count lol
     public ushort turnCount = 0;

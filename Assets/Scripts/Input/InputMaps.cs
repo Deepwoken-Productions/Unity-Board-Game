@@ -57,6 +57,22 @@ public class @InputMaps : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Yes"",
+                    ""type"": ""Button"",
+                    ""id"": ""441969d7-1faa-43ec-8940-48eadc8deb1e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""No"",
+                    ""type"": ""Button"",
+                    ""id"": ""aea83a04-568f-45ab-b3d0-b6e0dbc0f69c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Tap""
                 }
             ],
             ""bindings"": [
@@ -114,6 +130,28 @@ public class @InputMaps : IInputActionCollection, IDisposable
                     ""action"": ""Zoom"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c833c663-9bcf-4590-84fc-2ea1f916b62c"",
+                    ""path"": ""<Keyboard>/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Yes"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""57587231-95c2-42ce-80e6-11e9e65ecbb9"",
+                    ""path"": ""<Keyboard>/n"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""No"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -144,6 +182,8 @@ public class @InputMaps : IInputActionCollection, IDisposable
         m_KeyboardAndMouse_RightClick = m_KeyboardAndMouse.FindAction("RightClick", throwIfNotFound: true);
         m_KeyboardAndMouse_FlipCard = m_KeyboardAndMouse.FindAction("FlipCard", throwIfNotFound: true);
         m_KeyboardAndMouse_Zoom = m_KeyboardAndMouse.FindAction("Zoom", throwIfNotFound: true);
+        m_KeyboardAndMouse_Yes = m_KeyboardAndMouse.FindAction("Yes", throwIfNotFound: true);
+        m_KeyboardAndMouse_No = m_KeyboardAndMouse.FindAction("No", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -198,6 +238,8 @@ public class @InputMaps : IInputActionCollection, IDisposable
     private readonly InputAction m_KeyboardAndMouse_RightClick;
     private readonly InputAction m_KeyboardAndMouse_FlipCard;
     private readonly InputAction m_KeyboardAndMouse_Zoom;
+    private readonly InputAction m_KeyboardAndMouse_Yes;
+    private readonly InputAction m_KeyboardAndMouse_No;
     public struct KeyboardAndMouseActions
     {
         private @InputMaps m_Wrapper;
@@ -207,6 +249,8 @@ public class @InputMaps : IInputActionCollection, IDisposable
         public InputAction @RightClick => m_Wrapper.m_KeyboardAndMouse_RightClick;
         public InputAction @FlipCard => m_Wrapper.m_KeyboardAndMouse_FlipCard;
         public InputAction @Zoom => m_Wrapper.m_KeyboardAndMouse_Zoom;
+        public InputAction @Yes => m_Wrapper.m_KeyboardAndMouse_Yes;
+        public InputAction @No => m_Wrapper.m_KeyboardAndMouse_No;
         public InputActionMap Get() { return m_Wrapper.m_KeyboardAndMouse; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -231,6 +275,12 @@ public class @InputMaps : IInputActionCollection, IDisposable
                 @Zoom.started -= m_Wrapper.m_KeyboardAndMouseActionsCallbackInterface.OnZoom;
                 @Zoom.performed -= m_Wrapper.m_KeyboardAndMouseActionsCallbackInterface.OnZoom;
                 @Zoom.canceled -= m_Wrapper.m_KeyboardAndMouseActionsCallbackInterface.OnZoom;
+                @Yes.started -= m_Wrapper.m_KeyboardAndMouseActionsCallbackInterface.OnYes;
+                @Yes.performed -= m_Wrapper.m_KeyboardAndMouseActionsCallbackInterface.OnYes;
+                @Yes.canceled -= m_Wrapper.m_KeyboardAndMouseActionsCallbackInterface.OnYes;
+                @No.started -= m_Wrapper.m_KeyboardAndMouseActionsCallbackInterface.OnNo;
+                @No.performed -= m_Wrapper.m_KeyboardAndMouseActionsCallbackInterface.OnNo;
+                @No.canceled -= m_Wrapper.m_KeyboardAndMouseActionsCallbackInterface.OnNo;
             }
             m_Wrapper.m_KeyboardAndMouseActionsCallbackInterface = instance;
             if (instance != null)
@@ -250,6 +300,12 @@ public class @InputMaps : IInputActionCollection, IDisposable
                 @Zoom.started += instance.OnZoom;
                 @Zoom.performed += instance.OnZoom;
                 @Zoom.canceled += instance.OnZoom;
+                @Yes.started += instance.OnYes;
+                @Yes.performed += instance.OnYes;
+                @Yes.canceled += instance.OnYes;
+                @No.started += instance.OnNo;
+                @No.performed += instance.OnNo;
+                @No.canceled += instance.OnNo;
             }
         }
     }
@@ -270,5 +326,7 @@ public class @InputMaps : IInputActionCollection, IDisposable
         void OnRightClick(InputAction.CallbackContext context);
         void OnFlipCard(InputAction.CallbackContext context);
         void OnZoom(InputAction.CallbackContext context);
+        void OnYes(InputAction.CallbackContext context);
+        void OnNo(InputAction.CallbackContext context);
     }
 }

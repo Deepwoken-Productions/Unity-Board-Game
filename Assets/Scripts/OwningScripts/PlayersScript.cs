@@ -13,6 +13,7 @@ public class PlayersScript : MonoBehaviour
     private float defaultCameraSize;
     //Please not this does not affect the play in game model cus I'm lazy
     public Sprite crown;
+    public Material crownMat;
 
     [SerializeField]
     private short money = 0;
@@ -92,11 +93,47 @@ public class PlayersScript : MonoBehaviour
         enemy.UpdateTroops(diceRoll * multiplyer);
 
 
+        if (!CheckIsAlive())
+        {
+            enemy.UpdateMoney(money);
+            return 2;
+        }
+        else if (!enemy.CheckIsAlive())
+        {
+            money += enemy.Money;
+            return 1;
+        }
+        return 0;
+    }
+
+    public byte Battle(ProvinceScript enemyLand)
+    {
+        short tempFriendlyTroops = troops;
+        int diceRoll;
+
+        //This value is the divisor
+        int giveDice = 1000;
+
+        short multiplyer = -100;
+        short moneyMulti = 50;
+        int temp = -enemyLand.troops;
+
+        enemyLand.troops -= troops;
+        UpdateTroops(temp);
+
+        diceRoll = DiceScript.instance.RollDice(Mathf.CeilToInt(troops / giveDice));
+
+        UpdateMoney(Mathf.Min(enemyLand.money, diceRoll * moneyMulti));
+
+        diceRoll = DiceScript.instance.RollDice(Mathf.CeilToInt(tempFriendlyTroops / giveDice));
+        enemyLand.troops = diceRoll * multiplyer;
+
+
         if (CheckIsAlive())
         {
             return 2;
         }
-        else if (enemy.CheckIsAlive())
+        else if (enemyLand.troops <= 0)
         {
             return 1;
         }
