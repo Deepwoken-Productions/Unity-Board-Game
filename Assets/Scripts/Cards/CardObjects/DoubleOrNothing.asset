@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3ac43701e7ebb744bce040d14df4f9a, type: 3}
-  m_Name: Double Tile Effects
+  m_Name: DoubleOrNothing
   m_EditorClassIdentifier: 
-  cardName: Double or Nothing
-  description: Double the effects of the next tile you land on
-  artwork: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  cardName: Double Or Nothing
+  description: Roll the dice again, the next tile you land is activated twice
+  function: 0
+  artwork: {fileID: 21300000, guid: a5be75d7226cd70448a19b257c167c1a, type: 3}

@@ -20,5 +20,7 @@ public class ShopScript : TileScript
     public override void ActivateTile(PlayersScript player)
     {
         Debug.Log("Opening Shop");
+
+        TileOrderScript.instance.NextTurn();
     }
 }

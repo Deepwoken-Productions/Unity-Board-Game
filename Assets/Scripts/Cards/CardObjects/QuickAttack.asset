@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3ac43701e7ebb744bce040d14df4f9a, type: 3}
-  m_Name: x2 Roll Result
+  m_Name: QuickAttack
   m_EditorClassIdentifier: 
-  cardName: Double Trouble
-  description: Double what you rolled
-  artwork: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  cardName: QuickAttack
+  description: Attack a random player from your tile
+  function: 1
+  artwork: {fileID: 21300000, guid: 676ef3b6fcaf5d24a945e5e566033648, type: 3}

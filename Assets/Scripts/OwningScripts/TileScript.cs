@@ -30,5 +30,5 @@ public class TileScript : MonoBehaviour
         meshRenderer.material.color = color;
     }
 
-    public virtual void ActivateTile(PlayersScript player) {}
+    public virtual void ActivateTile(PlayersScript player){}
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Deck : MonoBehaviour
 {
@@ -8,39 +9,85 @@ public class Deck : MonoBehaviour
     [SerializeField]
     //Creates a list for the cards which will be used to get the cards
     public List<Card> deck;
+    private List<Card> used = new List<Card>();
+    public GameObject Parent;
+    public Image image;
+    public Text cardname;
+    public Text description;
 
-    // Start is called before the first frame update
-    void Start()
+    InputMaps interaction;
+
+    private void Start()
     {
-
+        interaction = new InputMaps();
+        Shuffle();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Shuffle()
     {
+        int positionsRemaining = deck.Count;
+        int newNum;
+        List<Card> oldCards = new List<Card>(deck);
+        //Loops through every card.
+        for (int curCard = 0; curCard < deck.Count; curCard++)
+        {
+            //Choose a random spot from the remaining positions
+            positionsRemaining--;
+            //Subtract before and add here so that the range is 0 - 51 when starting
+            newNum = Random.Range(0, positionsRemaining);
+            //Sets the deck array to take the random index
+            deck[curCard] = oldCards[newNum];
+            //is a list literally just for that functionality.
+            oldCards.RemoveAt(newNum);
+        }
+    }
+
+    public void ReplenishDeck()
+    {
+        foreach(Card c in used)
+        {
+            deck.Add(c);
+        }
+        used.Clear();
+        Shuffle();
+    }
+
+    public void DrawCard(PlayersScript ply, int times = 1)
+    {
+        StartCoroutine(OnKey(ply, times));
+
         
+        
+            
     }
 
-    //A method to get the Scriptable Object into the card
-    public void getCard() 
+    private IEnumerator OnKey(PlayersScript ply, int times)
     {
-        Card newCard = deck[rndCard()];
-        cardSwap(newCard);
-    }
+        ply.inUI = true;
+        Parent.SetActive(true);
+        for (int i = 0; i < times; i++)
+        {
+            image.sprite = deck[0].artwork;
+            cardname.text = deck[0].name;
+            description.text = deck[0].description;
 
-    //A method to generate and return a random number form 0 to 4, used for randomizing cards in the list
-    public int rndCard()
-    {
-        float rndNum = Random.Range(0, 4);
-
-        return (int)rndNum;
-    }
-
-    //Method to swap the Scriptable Object thats created for the card
-    public void cardSwap(Card newCard) 
-    {
-        Card currentCard = GameObject.Find("Canvas").transform.GetChild(0).gameObject.GetComponent<cardDisplay>().card;
-        currentCard = newCard;
+            interaction.Enable();
+            while (!interaction.KeyboardAndMouse.FlipCard.triggered)
+            {
+                yield return null;
+            }
+            interaction.Disable();
+            deck[0].Activate(ply);
+            used.Add(deck[0]);
+            deck.RemoveAt(0);
+            if(deck.Count == 0)
+            {
+                ReplenishDeck();
+            }
+        }
+        Parent.SetActive(false);
+        ply.inUI = false;
+        TileOrderScript.instance.NextTurn();
     }
 
 }

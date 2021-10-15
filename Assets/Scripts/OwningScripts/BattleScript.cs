@@ -33,7 +33,6 @@ public class BattleScript : MonoBehaviour
                             TileCheck[i].Battle(TileCheck[p]);
                         }
                     }
-                    
                 }
             }
         }

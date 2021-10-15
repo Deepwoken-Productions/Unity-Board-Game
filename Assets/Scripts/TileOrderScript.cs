@@ -93,15 +93,18 @@ public class TileOrderScript : MonoBehaviour
 
     public void NextTurn()
     {
+        Debug.Log(players[turnCount % players.Count].userName + "Has Ended their turn");
         players[turnCount % players.Count].isTurn = false;
+        players[turnCount % players.Count].isMoving = false;
         players[++turnCount % players.Count].isTurn = true;
         currentPlayer = players[turnCount % players.Count].transform;
         UpdateUI();
         battle.PlayerLoop();
     }
 
-    void UpdateUI()
+    public void UpdateUI()
     {
+        Debug.Log("Updating UI");
         //Bad code, but I'm too lazy to do this right. -- Needa make a public int start or read the names otherwise
         for (int i = 3; i < UI.childCount && i < players.Count + 3; i++)
         {

@@ -42,8 +42,10 @@ public class PlayersScript : MonoBehaviour
 
     private int currentDiceRoll;
     public byte zOffset;
-    private bool isMoving;
+    public bool isMoving;
     public bool isTurn;
+
+    public bool inUI = false;
 
     float zoom;
     float zoomDelta;
@@ -52,7 +54,7 @@ public class PlayersScript : MonoBehaviour
 
     public float movementInterval;
 
-    private Vector3 playerMoveToPosition = Vector3.zero;
+    public Vector3 playerMoveToPosition = Vector3.zero;
     public Vector3 playerPositionOnTile = Vector3.zero;
 
     private Vector2 currentMousePosition;
@@ -68,9 +70,9 @@ public class PlayersScript : MonoBehaviour
         troops += (short)val;
     }
 
-    public void UpdateMoney(short val)
+    public void UpdateMoney(int val)
     {
-        money += val;
+        money += (short)val;
     }
 
     public byte Battle(PlayersScript enemy)
@@ -210,7 +212,7 @@ public class PlayersScript : MonoBehaviour
         //When the player right clicks their mouse do stuff
         userInputMap.KeyboardAndMouse.RightClick.performed += ctx =>
         {
-            if (isTurn && !isMoving)
+            if (isTurn && !isMoving && !inUI)
             {
                 //Rolling 2 dice
                 currentDiceRoll = DiceScript.instance.RollDice(2);
@@ -277,8 +279,10 @@ public class PlayersScript : MonoBehaviour
     }
 
     //If highlightTiles is true then tiles will be highlighted, if not player will move
-    IEnumerator IterateOverTiles(bool highlightTiles, int diceRoll)
+    public IEnumerator IterateOverTiles(bool highlightTiles, int diceRoll)
     {
+        if (isTurn)
+        {
             //Starting the debounce
             isMoving = true;
 
@@ -319,7 +323,7 @@ public class PlayersScript : MonoBehaviour
                     {
                         playerCurrentTile = 0;
                     }
-                Debug.Log("MOVING");
+                    Debug.Log("MOVING");
                     //Moves the player to the position of the next tile
                     playerMoveToPosition = tileOrder[playerCurrentTile].position;
                 }
@@ -341,15 +345,24 @@ public class PlayersScript : MonoBehaviour
                     HighlightSelectTiles(true, transform.name, tileScript);
                 }
             }
-        if (!highlightTiles)
-        {
-            //Calls the tiles activate function
-            Debug.Log(userName + "Has Ended their turn");
-            tileOrder[playerCurrentTile].GetComponent<TileScript>().ActivateTile(this);
-            TileOrderScript.instance.NextTurn();
+
+            if (!highlightTiles)
+            {
+                //Calls the tiles activate function
+                tileOrder[playerCurrentTile].GetComponent<TileScript>().ActivateTile(this);
+                if (!inUI) // Prevent escapes
+                {
+                    TileOrderScript.instance.NextTurn();
+                }
+            }
+            isMoving = false;
         }
-        isMoving = false;
         
+    }
+
+    public void ForceActivateTile()
+    {
+        tileOrder[playerCurrentTile].GetComponent<TileScript>().ActivateTile(this);
     }
     
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomTileScript : TileScript
+public class ChanceScript : TileScript
 {
 
     public Deck ChanceDeck;
@@ -21,5 +21,8 @@ public class RandomTileScript : TileScript
     public override void ActivateTile(PlayersScript player)
     {
         Debug.Log("Chance");
+
+        ChanceDeck.DrawCard(player, 1);
+        
     }
 }
