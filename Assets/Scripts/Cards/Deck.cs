@@ -55,7 +55,6 @@ public class Deck : MonoBehaviour
     public void DrawCard(PlayersScript ply, int times = 1)
     {
         StartCoroutine(OnKey(ply, times));
-
         
         
             
@@ -84,6 +83,14 @@ public class Deck : MonoBehaviour
             {
                 ReplenishDeck();
             }
+
+            interaction.Enable();
+            while (!interaction.KeyboardAndMouse.FlipCard.triggered)
+            {
+                yield return null;
+            }
+            interaction.Disable();
+            TileOrderScript.instance.UIText.text = "";
         }
         Parent.SetActive(false);
         ply.inUI = false;

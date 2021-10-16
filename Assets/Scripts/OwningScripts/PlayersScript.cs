@@ -398,6 +398,7 @@ public class PlayersScript : MonoBehaviour
 
     public void ForceActivateTile()
     {
+        Debug.Log("ForceActivatedTile");
         tileOrder[playerCurrentTile].GetComponent<TileScript>().ActivateTile(this);
     }
     

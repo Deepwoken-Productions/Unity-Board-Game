@@ -10,6 +10,11 @@ public class Card : ScriptableObject
     public byte function;
 
     public Sprite artwork;
+    InputMaps interaction;
+    private void Awake()
+    {
+        interaction = new InputMaps();
+    }
 
     public void Activate(PlayersScript curPly)
     {
@@ -17,12 +22,36 @@ public class Card : ScriptableObject
         {
             case 0:
                 Debug.Log("Double Or Nothing");
-                curPly.StartCoroutine(curPly.IterateOverTiles(false, DiceScript.instance.RollDice(2)));
-                curPly.ForceActivateTile();
+                
+                int valA = DiceScript.instance.RollDice(1);
+
+                string text  = "You rolled a: " + valA + " and gambled: $" + (valA * 100);
+
+                int valB = DiceScript.instance.RollDice(1);
+                int sum = 0;
+                
+                if (valB < 3)
+                {
+                    sum = valA * -100;
+                    text += "... You lost it all! $" + sum + " Press anything to continue";
+                }
+                else
+                {
+                    sum = valA * 100;
+                    text += "... You doubled your bet! $" + sum + " Press anything to continue"; 
+                }
+                curPly.UpdateMoney(sum);
+                curPly.CheckIsAlive();
+
+                TileOrderScript.instance.UIText.text = text;
                 break;
             case 1:
                 Debug.Log("Quick Attack");
-                curPly.Battle(TileOrderScript.instance.players[Random.Range(0, TileOrderScript.instance.players.Count)]);
+                int val = Random.Range(0, TileOrderScript.instance.players.Count);
+                curPly.Battle(TileOrderScript.instance.players[val]);
+                //Move this into battlescript
+                TileOrderScript.instance.UIText.text = "You Attacked: " + TileOrderScript.instance.players[val].userName + " Press anything to continue";
+
                 break;
             case 2:
                 Debug.Log("Forfiet");
@@ -37,6 +66,7 @@ public class Card : ScriptableObject
                         ply.UpdateMoney(lossVal);
                     }
                 }
+                TileOrderScript.instance.UIText.text = "You shared your wealth. Press anything to continue";
                 TileOrderScript.instance.UpdateUI();
                 break;
         }
