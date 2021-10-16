@@ -10,7 +10,6 @@ public class ProvinceScript : TileScript
     public int money = 0;
     public int cost = 0;
     PlayersScript Owner;
-    InputMaps interaction;
 
     public override void ActivateTile(PlayersScript player)
     {
@@ -20,7 +19,7 @@ public class ProvinceScript : TileScript
 
     private void Start()
     {
-        interaction = new InputMaps();
+        
         ResetTile();
     }
 
@@ -68,7 +67,7 @@ public class ProvinceScript : TileScript
             if (player.Money >= cost)
             {
                 //Would you like to buy this tile?
-                TileOrderScript.instance.UIText.text = "Would you like to buy this land for $" + cost + "? Press Y for yes or N for no.";
+                TileOrderScript.instance.UIText.text = "Would you like to buy this land for $" + cost + "? This land holds " + troops + " troops and $" + money + " (Rewards granted when you land here again). Press Y for yes or N for no.";
                 while(!interaction.KeyboardAndMouse.Yes.triggered && !interaction.KeyboardAndMouse.No.triggered)
                 {
                     yield return null;

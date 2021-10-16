@@ -2,23 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WarpScript : TileScript
+public class DeathTile : TileScript
 {
-    public byte sendToTileNum = 0;
-    public byte sendToMapLayer;
-
+    // Start is called before the first frame update
     public override void ActivateTile(PlayersScript player)
     {
-        player.playerCurrentTile = sendToTileNum;
-        player.TeleportToPos(sendToMapLayer);
+        player.UpdateMoney(player.Money/2);
+        player.UpdateTroops(player.Troops/2);
         player.inUI = true;
         StartCoroutine(Continue(player));
+        
     }
 
     IEnumerator Continue(PlayersScript player)
     {
         interaction.Enable();
-        TileOrderScript.instance.UIText.text = "You have been teleported! Press space to continue";
+        TileOrderScript.instance.UIText.text = "This tile is cursed, you lost half your soldiers and troops! Press space to continue";
         while (!interaction.KeyboardAndMouse.FlipCard.triggered)
         {
             yield return null;

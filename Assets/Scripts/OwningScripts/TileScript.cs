@@ -19,9 +19,12 @@ public class TileScript : MonoBehaviour
 
     protected MeshRenderer meshRenderer;
 
+    protected InputMaps interaction;
+
     protected void Awake()
     {
         //Grabs the mesh renderer of the tile
+        interaction = new InputMaps();
         meshRenderer = transform.gameObject.GetComponent<MeshRenderer>();
     }
 

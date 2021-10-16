@@ -30,6 +30,9 @@ public class TileOrderScript : MonoBehaviour
 
     public Text UIText;
 
+    public short startingMoney;
+    public short startingTroops;
+
     public Transform playerHoldingObject;
     //this value keep track of two things. 1) Who's turn it is (turncount % playercount) 2) turn count lol
     public ushort turnCount = 0;
@@ -48,10 +51,8 @@ public class TileOrderScript : MonoBehaviour
             //Adds all the players to the array
             players.Add(playerHoldingObject.GetChild(i).GetComponent<PlayersScript>());
             players[i].isTurn = false;
-        }
-        foreach (PlayersScript ps in players)
-        {
-            Debug.Log("init" + ps.userName);
+            players[i].UpdateMoney(-players[i].Money + startingMoney);
+            players[i].UpdateTroops(-players[i].Troops + startingTroops);
         }
 
         //If there is no instances of this class, then define this instance as an instance of this class
@@ -86,10 +87,6 @@ public class TileOrderScript : MonoBehaviour
         //Bob Jim
         players[0].isTurn = true;
         currentPlayer = players[0].transform;
-        foreach (PlayersScript ps in players)
-        {
-            Debug.Log(ps.userName);
-        }
         UpdateUI();
     }
 
