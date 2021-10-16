@@ -142,7 +142,7 @@ public class PlayersScript : MonoBehaviour
 
     public bool CheckIsAlive()
     {
-        return true;
+        return troops > 0 && money > 0;
     }
 
 
