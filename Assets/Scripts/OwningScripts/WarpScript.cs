@@ -26,6 +26,7 @@ public class WarpScript : TileScript
         interaction.Disable();
         TileOrderScript.instance.UIText.text = "";
         player.inUI = false;
+        StartCoroutine(TileOrderScript.instance.battle.PlayerLoop());
         TileOrderScript.instance.NextTurn();
     }
 }

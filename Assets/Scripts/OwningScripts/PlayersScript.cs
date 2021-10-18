@@ -92,8 +92,11 @@ public class PlayersScript : MonoBehaviour
         diceRoll = DiceScript.instance.RollDice(Mathf.CeilToInt((float)tempFriendlyTroops / (float)giveDice));
         enemy.UpdateTroops(diceRoll * multiplyer);
 
-
-        if (!CheckIsAlive())
+        if(!CheckIsAlive() && !enemy.CheckIsAlive())
+        {
+            return 3;
+        }
+        else if (!CheckIsAlive())
         {
             enemy.UpdateMoney(money);
             return 2;
@@ -124,7 +127,6 @@ public class PlayersScript : MonoBehaviour
         diceRoll = DiceScript.instance.RollDice(Mathf.CeilToInt((float)troops / (float)giveDice));
 
         UpdateMoney(Mathf.Min(enemyLand.money, diceRoll * moneyMulti));
-        Debug.Log("Status: " + enemyLand.money + "<>" + (diceRoll * moneyMulti) + diceRoll);
         enemyLand.troops = diceRoll * multiplyer;
 
 
@@ -238,7 +240,7 @@ public class PlayersScript : MonoBehaviour
                         //If the tile the player clicked on is highlighted and is set as selected by them then move them to said tile
                         if (playerClickedTileScript.selected == true && playerClickedTileScript.selectedPlayerName == transform.name)
                         {
-                            StartCoroutine(IterateOverTiles(false, moveDiceRoll));
+                            StartCoroutine(IterateOverTiles(moveDiceRoll));
                         }
                     }
                 }
@@ -254,7 +256,7 @@ public class PlayersScript : MonoBehaviour
                 currentDiceRoll = DiceScript.instance.RollDice(2);
 
                 //Highlighting the tiles that the player can move to
-                StartCoroutine(IterateOverTiles(true, currentDiceRoll));
+                StartCoroutine(IterateOverTiles(currentDiceRoll));
 
                 Debug.Log(userName + "Has Right clicked");
             }
@@ -315,7 +317,7 @@ public class PlayersScript : MonoBehaviour
     }
 
     //If highlightTiles is true then tiles will be highlighted, if not player will move
-    public IEnumerator IterateOverTiles(bool highlightTiles, int diceRoll)
+    public IEnumerator IterateOverTiles(int diceRoll)
     {
         if (isTurn)
         {
@@ -330,14 +332,6 @@ public class PlayersScript : MonoBehaviour
 
             Debug.Log(userName + " rolled a " + diceRoll + " im so proud of you UwU");
 
-            //Unhighlights all selected tiles and deselects all tiles
-            for (int i = 0; i < tileOrder.Length; i++)
-            {
-                TileScript tileScript = tileOrder[i].GetComponent<TileScript>();
-
-                HighlightSelectTiles(false, null, tileScript);
-            }
-
             //While the current dice roll number is greater than 0
             while (diceRollCounter > 0)
             {
@@ -347,49 +341,37 @@ public class PlayersScript : MonoBehaviour
                 //Increments the dice roll counter
                 diceRollCounter--;
 
-                //If highlight tiles is off
-                if (!highlightTiles)
+                //Figuring out which tile the player's supposed to be on
+                if (playerCurrentTile < tileOrder.Length - 1)
                 {
-                    //Figuring out which tile the player's supposed to be on
-                    if (playerCurrentTile < tileOrder.Length - 1)
-                    {
-                        playerCurrentTile++;
-                    }
-                    else
-                    {
-                        playerCurrentTile = 0;
-                    }
-                    Debug.Log("MOVING");
-                    //Moves the player to the position of the next tile
-                    playerMoveToPosition = tileOrder[playerCurrentTile].position;
+                    playerCurrentTile++;
                 }
                 else
                 {
-                    //Figuring out which tile the iterator is supposed to be on
-                    if (iteratorCurrentTile < tileOrder.Length - 1)
-                    {
-                        iteratorCurrentTile++;
-                    }
-                    else
-                    {
-                        iteratorCurrentTile = 0;
-                    }
-
-                    TileScript tileScript = tileOrder[iteratorCurrentTile].GetComponent<TileScript>();
-
-                    //Highlighting the next tile and selecting it for a specific player
-                    HighlightSelectTiles(true, transform.name, tileScript);
+                    playerCurrentTile = 0;
                 }
-            }
+                Debug.Log("MOVING");
+                //Moves the player to the position of the next tile
+                playerMoveToPosition = tileOrder[playerCurrentTile].position;
 
-            if (!highlightTiles)
-            {
-                //Calls the tiles activate function
-                tileOrder[playerCurrentTile].GetComponent<TileScript>().ActivateTile(this);
-                if (!inUI) // Prevent escapes
+                //Figuring out which tile the iterator is supposed to be on
+                if (iteratorCurrentTile < tileOrder.Length - 1)
                 {
-                    TileOrderScript.instance.NextTurn();
+                    iteratorCurrentTile++;
                 }
+                else
+                {
+                    iteratorCurrentTile = 0;
+                }
+
+                TileScript tileScript = tileOrder[iteratorCurrentTile].GetComponent<TileScript>();
+                
+            }
+            //Calls the tiles activate function
+            tileOrder[playerCurrentTile].GetComponent<TileScript>().ActivateTile(this);
+            if (!inUI) // Prevent escapes
+            {
+                TileOrderScript.instance.NextTurn();
             }
             isMoving = false;
         }
@@ -413,23 +395,6 @@ public class PlayersScript : MonoBehaviour
             playerMoveToPosition = Vector3.zero;
         }
         
-    }
-
-    //Highlights and selects tiles, pretty self explanatory code
-    void HighlightSelectTiles(bool selected, string selectedPlayerName, TileScript tileScript)
-    {
-        if(selected && selectedPlayerName != null)
-        {
-            tileScript.selected = true;
-            tileScript.selectedPlayerName = selectedPlayerName;
-            tileScript.TextureTile(highlightMaterial);
-        }
-        else
-        {
-            tileScript.selected = false;
-            tileScript.selectedPlayerName = null;
-            tileScript.TextureTile(tileMaterial);
-        }
     }
 
 }

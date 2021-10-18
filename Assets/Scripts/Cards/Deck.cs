@@ -55,9 +55,9 @@ public class Deck : MonoBehaviour
     public void DrawCard(PlayersScript ply, int times = 1)
     {
         StartCoroutine(OnKey(ply, times));
-        
-        
-            
+        StartCoroutine(TileOrderScript.instance.battle.PlayerLoop());
+
+
     }
 
     private IEnumerator OnKey(PlayersScript ply, int times)

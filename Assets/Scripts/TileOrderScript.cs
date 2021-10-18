@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 //This is a singleton script, that means there is
@@ -17,6 +18,8 @@ public class TileOrderScript : MonoBehaviour
     public BattleScript battle;
 
     public List<Transform[]> tileOrders;
+
+    public Transform Players;
 
     public Transform[] maps;
 
@@ -98,7 +101,7 @@ public class TileOrderScript : MonoBehaviour
         players[++turnCount % players.Count].isTurn = true;
         currentPlayer = players[turnCount % players.Count].transform;
         UpdateUI();
-        battle.PlayerLoop();
+        StartCoroutine(CheckWin());
     }
 
     public void UpdateUI()
@@ -129,5 +132,23 @@ public class TileOrderScript : MonoBehaviour
                 tileOrder[z] = mapTiles.GetChild(z);
             }
         }
+    }
+
+    public void RemovePlayer(PlayersScript ply)
+    {
+        Destroy(UI.GetChild(2  + (players.Count)).gameObject);
+        Destroy(Players.GetChild(players.IndexOf(ply)).gameObject);
+        players.Remove(ply);
+        UpdateUI();
+    }
+
+    public IEnumerator CheckWin()
+    {
+       if(players.Count == 1)
+       {
+            UIText.text = players[0] + " WINS! Total turns: " + turnCount;
+            yield return new WaitForSeconds(20);
+            SceneManager.LoadScene("MainMenu");
+       }
     }
 }

@@ -10,11 +10,18 @@ public class DiceScript : MonoBehaviour
 {
     public static DiceScript instance { get; private set; }
 
+    public List<Sprite> diceCovers;
+    public List<GameObject> Die;
+
     //The random number generator
     System.Random prng = new System.Random();
 
     private void Awake()
     {
+        foreach (GameObject die in Die)
+        {
+            die.SetActive(false);
+        }
         //If there is no instances of this class, then define this instance as an instance of this class
         if (instance == null)
         {
@@ -23,19 +30,28 @@ public class DiceScript : MonoBehaviour
         //If there're pre existing instances of this class then destroy them
         else
         {
-            GameObject.Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 
     //Roll dice method, rolls a defined amount of dice and returns the roll
-    public int RollDice( int numberOfDice)
+    public int RollDice(int numberOfDice)
     {
+        foreach(GameObject die in Die)
+        {
+            die.SetActive(false);
+        }
         int diceRoll = 0;
+        int cummies = 0; // UwU see this teacher ~~ Bilal
 
         for(int i = 0; i < numberOfDice; i++)
         {
             //Generates a random bumber between 1 - 6 and adds it to the dice roll integer
-            diceRoll += prng.Next(1, 6);
+            cummies = prng.Next(1, 6);
+            diceRoll += cummies;
+
+            Die[i].GetComponent<SpriteRenderer>().sprite = diceCovers[cummies - 1];
+            Die[i].SetActive(true);
         }
 
         return diceRoll;

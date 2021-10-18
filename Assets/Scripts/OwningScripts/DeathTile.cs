@@ -7,8 +7,8 @@ public class DeathTile : TileScript
     // Start is called before the first frame update
     public override void ActivateTile(PlayersScript player)
     {
-        player.UpdateMoney(player.Money/2);
-        player.UpdateTroops(player.Troops/2);
+        player.UpdateMoney(-player.Money/2);
+        player.UpdateTroops(-player.Troops/2);
         player.inUI = true;
         StartCoroutine(Continue(player));
         
@@ -25,6 +25,7 @@ public class DeathTile : TileScript
         interaction.Disable();
         TileOrderScript.instance.UIText.text = "";
         player.inUI = false;
+        StartCoroutine(TileOrderScript.instance.battle.PlayerLoop());
         TileOrderScript.instance.NextTurn();
     }
 }

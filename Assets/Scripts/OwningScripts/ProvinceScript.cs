@@ -50,7 +50,16 @@ public class ProvinceScript : TileScript
             }
             else
             {
-                TileOrderScript.instance.UIText.text = "You lost the battle Troops lost: " + (preTroops - player.Troops) + " and gained $" + (preMoney - player.Money) + ". Press space to continue";
+                 if (!player.CheckIsAlive())
+                {
+                    TileOrderScript.instance.UIText.text = "You lost the battle and died! Your balance of $" + (preMoney - player.Money) + "was awared to: $" + Owner.userName + ". Press space to continue";
+                    Owner.UpdateMoney(player.Money);
+                    TileOrderScript.instance.RemovePlayer(player);
+                }
+                else
+                {
+                    TileOrderScript.instance.UIText.text = "You lost the battle Troops lost: " + (preTroops - player.Troops) + " and gained $" + (preMoney - player.Money) + ". Press space to continue";
+                }
             }
             interaction.Disable();
             interaction.Enable();
@@ -97,6 +106,7 @@ public class ProvinceScript : TileScript
         interaction.Disable();
         player.inUI = false;
         TileOrderScript.instance.UIText.text = "";
+        StartCoroutine(TileOrderScript.instance.battle.PlayerLoop());
         TileOrderScript.instance.NextTurn();
     }
 
