@@ -26,6 +26,7 @@ public class DeathTile : TileScript
         TileOrderScript.instance.UIText.text = "";
         player.inUI = false;
         StartCoroutine(TileOrderScript.instance.battle.PlayerLoop());
+        Debug.Log("Screech");
         TileOrderScript.instance.NextTurn();
     }
 }
